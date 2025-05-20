@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import ParticlesBg from "particles-bg";
+import dynamic from "next/dynamic";
 
+const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 
 
