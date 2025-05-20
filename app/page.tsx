@@ -1,103 +1,95 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import ParticlesBackground from "@/components/ParticlesJS";
+import ParticlesBg from "particles-bg";
+import logo from "../public/logos/logo-diana.png";
+
+
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="relative min-h-screen w-full items-center justify-center px-6 pt-32 md:pt-24 overflow-hidden">
+      <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+<section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Resolvemos los problemas más difíciles <br />
+          <span className="text-cyan-400">con matemáticas</span>.
+        </h1>
+        <p className="text-lg md:text-xl text-gray-300 mb-10">
+          Combinamos IA, modelos matemáticos y software a medida para líderes que enfrentan retos complejos.
+        </p>
+                <Link href="#contacto" className="px-6 py-3 bg-cyan-500 text-black rounded-full font-semibold hover:bg-cyan-400 transition">
+          Hablemos
+        </Link>
+      </section>
+ <section id="quehacemos" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Qué hacemos?</h2>
+          <p className="text-lg text-gray-300 mb-12 max-w-3xl">
+            Ayudamos a empresas e instituciones a resolver desafíos operativos y estratégicos mediante inteligencia artificial, matemáticas aplicadas y software a medida.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Modelos de optimización",
+              "Forecasting con IA",
+              "Software a la medida",
+              "Logística de primera y última milla",
+              "Modelos estratégicos",
+              "Equipos de datos embebidos",
+            ].map((cap, i) => (
+              <div key={i} className="p-6 border border-white/10 rounded-lg hover:border-cyan-500 transition">
+                <p className="text-xl font-medium text-white mb-2">{cap}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12">
+            <Link href="#metodologia" className="text-cyan-400 font-semibold hover:underline">Cómo trabajamos →</Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+       {/* Sección 3: Casos de éxito / Impacto */}
+ <section id="casos" className="relative z-10 py-32 px-6 md:px-0 bg-black overflow-hidden">
+        <div className="absolute inset-0 opacity-10 blur-3xl">
+          <div className="w-[40rem] h-[40rem] bg-cyan-500 rounded-full absolute -top-10 -left-10 mix-blend-screen animate-pulse" />
+          <div className="w-[30rem] h-[30rem] bg-purple-500 rounded-full absolute top-40 right-0 mix-blend-screen animate-pulse" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6 md:px-20">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Impacto real, resultados comprobables</h2>
+            <p className="text-lg text-gray-400">Confiado por líderes en distintas industrias para resolver sus retos más complejos.</p>
+          </div>
+          <div className="flex flex-col md:flex-row gap-10 md:gap-6 items-stretch justify-center">
+            {[{
+              cliente: "Grupo Diana",
+              resultado: "+20.3% en ventas con rutas dinámicas",
+              logo: "/logos/logo-diana.png",
+              fondo: ""
+            }, {
+              cliente: "Copa Airlines",
+              resultado: "-20% de tiempo en tierra optimizando colas",
+              logo: "/logos/copa-airlines-logo.png",
+              fondo: ""
+            }, {
+              cliente: "Falabella",
+              resultado: "Forecast de demanda con IA para optimizar inventario",
+              logo: "/logos/falabella.svg",
+              fondo: ""
+            }].map((caso, i) => (
+              <div key={i} className={`group relative ${caso.fondo} border border-white/10 p-8 rounded-2xl shadow-xl hover:shadow-cyan-500/10 transition-all backdrop-blur-lg w-full`}>                
+                <div className="flex flex-col  items-start gap-4 mb-4">
+                  <img src={caso.logo} alt={caso.cliente} className="h-10 w-auto opacity-80 group-hover:opacity-100 transition duration-300" />
+                  <span className="text-sm uppercase tracking-wider text-gray-400">{caso.cliente}</span>
+                </div>
+                <p className="text-xl font-semibold text-white leading-snug">{caso.resultado}</p>
+                <div className="absolute -top-3 -right-3 w-5 h-5 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
