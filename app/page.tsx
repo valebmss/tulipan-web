@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import ParticlesBackground from "@/components/ParticlesJS";
 import ParticlesBg from "particles-bg";
 import logo from "../public/logos/logo-diana.png";
 
