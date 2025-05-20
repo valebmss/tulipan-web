@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import ParticlesBg from "particles-bg";
-import logo from "../public/logos/logo-diana.png";
 
 
 
