@@ -1,9 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import dynamic from "next/dynamic";
+export const dynamic = "force-dynamic";
 
-const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
+import Link from "next/link";
+
+import dynamicImport from "next/dynamic";
+
+
+const ParticlesBg = dynamicImport(() => import("particles-bg"), { ssr: false });
 
 
 
