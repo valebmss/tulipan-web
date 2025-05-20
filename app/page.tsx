@@ -27,10 +27,13 @@ export default function Home() {
       </section>
  <section id="quehacemos" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Qué hacemos?</h2>
-          <p className="text-lg text-gray-300 mb-12 max-w-3xl">
+          <div className="text-center mb-12">
+             <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">¿Qué hacemos?</h2>
+
+          <p className="text-lg text-gray-300 mb-12 ">
             Ayudamos a empresas e instituciones a resolver desafíos operativos y estratégicos mediante inteligencia artificial, matemáticas aplicadas y software a medida.
           </p>
+         </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               "Modelos de optimización",
