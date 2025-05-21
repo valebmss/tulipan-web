@@ -28,7 +28,7 @@ export default function Home() {
           Hablemos
         </Link>
       </section>
- <section id="quehacemos" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white">
+ <section id="quehacemos" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white w-full">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">¿Qué hacemos?</h2>
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </section>
        {/* Sección 3: Casos de éxito / Impacto */}
- <section id="casos" className="relative z-10 py-32 px-6 md:px-0 bg-black overflow-hidden">
+ <section id="casos" className="relative z-10 py-32 px-6 md:px-0 bg-black overflow-hidden w-full">
         <div className="absolute inset-0 opacity-10 blur-3xl">
           <div className="w-[40rem] h-[40rem] bg-cyan-500 rounded-full absolute -top-10 -left-10 mix-blend-screen animate-pulse" />
           <div className="w-[30rem] h-[30rem] bg-purple-500 rounded-full absolute top-40 right-0 mix-blend-screen animate-pulse" />
