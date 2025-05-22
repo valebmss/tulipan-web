@@ -89,7 +89,7 @@ export default function Home() {
        <section id="sobrenosotros" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white w-full">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Quiénes Somos</h1>
+              <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Quiénes Somos</h1>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto">
                 Tulipán es un laboratorio de matemáticas aplicadas e inteligencia artificial. Diseñamos modelos a medida y herramientas digitales que aumentan los ingresos, reducen costos y desbloquean nuevas oportunidades en diversas industrias.
               </p>
@@ -107,7 +107,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.8 }} 
                 viewport={{ once: true }}
-                className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight"
+                className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight"
               >
                 Hecho para la Complejidad. Diseñado para el Impacto.
               </motion.h2>
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
         <div className="relative max-w-7xl mx-auto px-6 md:px-20">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Impacto real, resultados comprobables</h2>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Impacto real, resultados comprobables</h2>
             <p className="text-lg text-gray-400">Confiado por líderes en distintas industrias para resolver sus retos más complejos.</p>
           </div>
           <div className="flex flex-col md:flex-row gap-10 md:gap-6 items-stretch justify-center">
