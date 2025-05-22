@@ -63,7 +63,7 @@ export default function Home() {
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
 
 <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
           IA y Optimización que Impulsan los Negocios. <br />
           <span className="text-cyan-400">con matemáticas</span>.
         </h1>
@@ -89,7 +89,7 @@ export default function Home() {
        <section id="sobrenosotros" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white w-full">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">Quiénes Somos</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Quiénes Somos</h1>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto">
                 Tulipán es un laboratorio de matemáticas aplicadas e inteligencia artificial. Diseñamos modelos a medida y herramientas digitales que aumentan los ingresos, reducen costos y desbloquean nuevas oportunidades en diversas industrias.
               </p>
@@ -107,7 +107,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.8 }} 
                 viewport={{ once: true }}
-                className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight"
+                className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight"
               >
                 Hecho para la Complejidad. Diseñado para el Impacto.
               </motion.h2>
