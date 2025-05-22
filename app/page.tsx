@@ -3,9 +3,12 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 import dynamicImport from "next/dynamic";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 
 
 const ParticlesBg = dynamicImport(() => import("particles-bg"), { ssr: false });
@@ -13,6 +16,14 @@ const ParticlesBg = dynamicImport(() => import("particles-bg"), { ssr: false });
 
 
 export default function Home() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const amount = direction === "left" ? -320 : 320;
+      scrollContainerRef.current.scrollBy({ left: amount, behavior: "smooth" });
+    }
+  };
   return (
     <main className="relative min-h-screen w-full items-center justify-center px-6 pt-32 md:pt-24 overflow-hidden">
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
@@ -41,37 +52,89 @@ export default function Home() {
 </div>
 
       </section>
-    <ParallaxProvider scrollAxis="horizontal">
- <section id="quehacemos" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white w-full">
-  
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-             <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">¿Qué hacemos?</h2>
-
-          <p className="text-lg text-gray-300 mb-12 ">
-            Ayudamos a empresas e instituciones a resolver desafíos operativos y estratégicos mediante inteligencia artificial, matemáticas aplicadas y software a medida.
-          </p>
-         </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "Modelos de optimización",
-              "Forecasting con IA",
-              "Software a la medida",
-              "Logística de primera y última milla",
-              "Modelos estratégicos",
-              "Equipos de datos embebidos",
-            ].map((cap, i) => (
-              <div key={i} className="p-6 border border-white/10 rounded-lg hover:border-cyan-500 transition">
-                <p className="text-xl font-medium text-white mb-2">{cap}</p>
+       <section id="sobrenosotros" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white w-full">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Quiénes Somos</h2>
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+                Tulipán es un laboratorio de matemáticas aplicadas e inteligencia artificial. Diseñamos modelos a medida y herramientas digitales que aumentan los ingresos, reducen costos y desbloquean nuevas oportunidades en diversas industrias.
+              </p>
+              <p className="text-lg text-gray-300 mt-6 max-w-4xl mx-auto">
+                Nuestro equipo de doctores, ingenieros y desarrolladores trabaja mano a mano con los clientes para desplegar soluciones poderosas en tiempo récord, a menudo en semanas y no años.
+              </p>
+            </div>
+          </div>
+        </section>
+          <section id="capacidad" className="relative z-10 py-24 px-6 md:px-10 bg-black text-white w-full">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Hecho para la Complejidad. Diseñado para el Impacto.</h2>
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+                Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que generan eficiencia, reducen costos y desbloquean crecimiento.
+              </p>
+            </div>
+            <div className="relative">
+              <button
+                onClick={() => scroll("left")}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
+              >
+                <FaChevronLeft />
+              </button>
+              <div
+                ref={scrollContainerRef}
+                className="flex overflow-x-scroll scrollbar-hide space-x-6 pb-4 snap-x scroll-smooth px-8"
+              >
+                {[{
+                  title: "Modelos de Optimización",
+                  content: [
+                    "Asignación de Aviones – Copa Airlines: minimiza cambios y mantenimiento",
+                    "Tamaño de Lote – Grupo Diana: reduce costos y mejora eficiencia",
+                    "Optimización de Distribución – Huevos Kikes: -20% en logística"
+                  ]
+                }, {
+                  title: "Pronóstico y Planificación de la Demanda",
+                  content: [
+                    "Pronóstico de Ventas – Grupo Corona: incluye variables macroeconómicas",
+                    "Planificación de Inventarios – Retail: automatiza abastecimiento"
+                  ]
+                }, {
+                  title: "Personalización y Recomendaciones",
+                  content: [
+                    "Promociones Inteligentes – Grupo Diana: personalización por comportamiento",
+                    "Sistemas de Recomendación: productos relacionados con IA",
+                    "Análisis de Lealtad – OfficeMax: clustering de clientes"
+                  ]
+                }, {
+                  title: "IA Aplicada como SaaS",
+                  content: [
+                    "Todos nuestros modelos se despliegan sin servidores en AWS, con mejora continua y soporte. Tú te enfocas en crecer—nosotros nos encargamos de las matemáticas."
+                  ]
+                }].map((item, i) => (
+                  <div
+                    key={i}
+                    className="min-w-[300px] md:min-w-[320px] max-w-xs bg-white/5 border border-cyan-600/10 rounded-xl p-6 transition-all duration-300 hover:bg-white/10 snap-center hover:scale-105"
+                  >
+                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                    <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                      {item.content.map((text, j) => (
+                        <li key={j}>{text}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-            ))}
+              <button
+                onClick={() => scroll("right")}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
+              >
+                <FaChevronRight />
+              </button>
+            </div>
           </div>
-          <div className="mt-12">
-            <Link href="#metodologia" className="text-cyan-400 font-semibold hover:underline">Cómo trabajamos →</Link>
-          </div>
-        </div>
-      </section>
-                </ParallaxProvider>
+        </section>
+
+
+       
 
        {/* Sección 3: Casos de éxito / Impacto */}
  <section id="casos" className="relative z-10 py-32 px-6 md:px-0 bg-black overflow-hidden w-full">
