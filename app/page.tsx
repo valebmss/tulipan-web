@@ -24,6 +24,38 @@ export default function Home() {
       scrollContainerRef.current.scrollBy({ left: amount, behavior: "smooth" });
     }
   };
+
+    const cards = [
+    {
+      title: "Modelos de Optimización",
+      content: [
+        "Asignación de Aviones – Copa Airlines: minimiza cambios y mantenimiento",
+        "Tamaño de Lote – Grupo Diana: reduce costos y mejora eficiencia",
+        "Optimización de Distribución – Huevos Kikes: -20% en logística"
+      ]
+    },
+    {
+      title: "Pronóstico y Planificación de la Demanda",
+      content: [
+        "Pronóstico de Ventas – Grupo Corona: incluye variables macroeconómicas",
+        "Planificación de Inventarios – Retail: automatiza abastecimiento"
+      ]
+    },
+    {
+      title: "Personalización y Recomendaciones",
+      content: [
+        "Promociones Inteligentes – Grupo Diana: personalización por comportamiento",
+        "Sistemas de Recomendación: productos relacionados con IA",
+        "Análisis de Lealtad – OfficeMax: clustering de clientes"
+      ]
+    },
+    {
+      title: "IA Aplicada como SaaS",
+      content: [
+        "Todos nuestros modelos se despliegan sin servidores en AWS, con mejora continua y soporte. Tú te enfocas en crecer—nosotros nos encargamos de las matemáticas."
+      ]
+    }
+  ];
   return (
     <main className="relative min-h-screen w-full items-center justify-center px-6 pt-32 md:pt-24 overflow-hidden">
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
@@ -65,7 +97,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-          <section id="capacidad" className="relative z-10 py-24 px-6 md:px-10 bg-black text-white w-full">
+         <section id="capacidad" className="relative z-10 py-24 px-6 md:px-10 bg-black text-white w-full">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Hecho para la Complejidad. Diseñado para el Impacto.</h2>
@@ -73,65 +105,44 @@ export default function Home() {
                 Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que generan eficiencia, reducen costos y desbloquean crecimiento.
               </p>
             </div>
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <button
                 onClick={() => scroll("left")}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
+                className="absolute left-0 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
               >
                 <FaChevronLeft />
               </button>
               <div
                 ref={scrollContainerRef}
-                className="flex overflow-x-scroll scrollbar-hide space-x-6 pb-4 snap-x scroll-smooth px-8"
+                className="flex overflow-x-auto gap-6 snap-x scroll-smooth px-8 max-w-full hide-scroll-bar"
+                style={{ scrollbarWidth: "none" }}
               >
-                {[{
-                  title: "Modelos de Optimización",
-                  content: [
-                    "Asignación de Aviones – Copa Airlines: minimiza cambios y mantenimiento",
-                    "Tamaño de Lote – Grupo Diana: reduce costos y mejora eficiencia",
-                    "Optimización de Distribución – Huevos Kikes: -20% en logística"
-                  ]
-                }, {
-                  title: "Pronóstico y Planificación de la Demanda",
-                  content: [
-                    "Pronóstico de Ventas – Grupo Corona: incluye variables macroeconómicas",
-                    "Planificación de Inventarios – Retail: automatiza abastecimiento"
-                  ]
-                }, {
-                  title: "Personalización y Recomendaciones",
-                  content: [
-                    "Promociones Inteligentes – Grupo Diana: personalización por comportamiento",
-                    "Sistemas de Recomendación: productos relacionados con IA",
-                    "Análisis de Lealtad – OfficeMax: clustering de clientes"
-                  ]
-                }, {
-                  title: "IA Aplicada como SaaS",
-                  content: [
-                    "Todos nuestros modelos se despliegan sin servidores en AWS, con mejora continua y soporte. Tú te enfocas en crecer—nosotros nos encargamos de las matemáticas."
-                  ]
-                }].map((item, i) => (
+                {cards.map((item, i) => (
                   <div
                     key={i}
-                    className="min-w-[300px] md:min-w-[320px] max-w-xs bg-white/5 border border-cyan-600/10 rounded-xl p-6 transition-all duration-300 hover:bg-white/10 snap-center hover:scale-105"
+                    className="min-w-[300px] md:min-w-[320px] max-w-xs bg-white/5 border border-cyan-600/10 rounded-xl p-6 transition-all duration-300 snap-center hover:scale-105 group cursor-pointer relative"
                   >
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-                      {item.content.map((text, j) => (
-                        <li key={j}>{text}</li>
-                      ))}
-                    </ul>
+                    <div className="absolute inset-0 bg-black/90 rounded-xl opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300">
+                      <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                        {item.content.map((text, j) => (
+                          <li key={j}>{text}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 ))}
               </div>
               <button
                 onClick={() => scroll("right")}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
+                className="absolute right-0 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
               >
                 <FaChevronRight />
               </button>
             </div>
           </div>
         </section>
+
 
 
        
