@@ -8,6 +8,8 @@ import { useEffect, useRef } from "react";
 import dynamicImport from "next/dynamic";
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 
 
 
@@ -97,47 +99,62 @@ export default function Home() {
             </div>
           </div>
         </section>
-         <section id="capacidad" className="relative z-10 py-24 px-6 md:px-10 bg-black text-white w-full">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Hecho para la Complejidad. Diseñado para el Impacto.</h2>
-              <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+          <section id="capacidad" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-20">
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.8 }} 
+                viewport={{ once: true }}
+                className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight"
+              >
+                Hecho para la Complejidad. Diseñado para el Impacto.
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+                viewport={{ once: true }}
+                className="text-xl text-gray-300 max-w-4xl mx-auto"
+              >
                 Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que generan eficiencia, reducen costos y desbloquean crecimiento.
-              </p>
+              </motion.p>
             </div>
             <div className="relative flex items-center justify-center">
               <button
                 onClick={() => scroll("left")}
-                className="absolute left-0 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
+                className="absolute left-0 z-20 bg-cyan-500 text-black rounded-full p-3 hover:bg-cyan-400 shadow-lg"
               >
-                <FaChevronLeft />
+                <FaChevronLeft size={20} />
               </button>
               <div
                 ref={scrollContainerRef}
-                className="flex overflow-x-auto gap-6 snap-x scroll-smooth px-8 max-w-full hide-scroll-bar"
+                className="flex overflow-x-auto gap-10 snap-x scroll-smooth px-10 max-w-full hide-scroll-bar"
                 style={{ scrollbarWidth: "none" }}
               >
                 {cards.map((item, i) => (
-                  <div
+                  <motion.div
                     key={i}
-                    className="min-w-[300px] md:min-w-[320px] max-w-xs bg-white/5 border border-cyan-600/10 rounded-xl p-6 transition-all duration-300 snap-center hover:scale-105 group cursor-pointer relative"
+                    whileHover={{ scale: 1.07 }}
+                    className="min-w-[380px] md:min-w-[460px] max-w-sm bg-gradient-to-br from-black/70 to-cyan-900/10 border border-cyan-400/10 rounded-3xl p-10 shadow-2xl transition-all duration-500 snap-center group relative cursor-pointer overflow-hidden"
                   >
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <div className="absolute inset-0 bg-black/90 rounded-xl opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-300">
-                      <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                    <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{item.title}</h3>
+                    <div className="absolute inset-0 bg-black/90 rounded-3xl opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-500 flex items-center justify-center">
+                      <ul className="text-base text-gray-300 space-y-2 list-disc list-inside">
                         {item.content.map((text, j) => (
                           <li key={j}>{text}</li>
                         ))}
                       </ul>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <button
                 onClick={() => scroll("right")}
-                className="absolute right-0 z-20 bg-cyan-500 text-black rounded-full p-2 hover:bg-cyan-400 shadow"
+                className="absolute right-0 z-20 bg-cyan-500 text-black rounded-full p-3 hover:bg-cyan-400 shadow-lg"
               >
-                <FaChevronRight />
+                <FaChevronRight size={20} />
               </button>
             </div>
           </div>
