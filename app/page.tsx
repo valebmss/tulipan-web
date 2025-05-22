@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 import Link from "next/link";
 
 import dynamicImport from "next/dynamic";
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 
 
 const ParticlesBg = dynamicImport(() => import("particles-bg"), { ssr: false });
@@ -18,17 +19,31 @@ export default function Home() {
 
 <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          Resolvemos los problemas más difíciles <br />
+          IA y Optimización que Impulsan los Negocios. <br />
           <span className="text-cyan-400">con matemáticas</span>.
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-10">
-          Combinamos IA, modelos matemáticos y software a medida para líderes que enfrentan retos complejos.
+          Desde aerolíneas hasta bienes de consumo, Tulipán ayuda a las empresas a desbloquear eficiencia y crecimiento mediante herramientas personalizadas de optimización, pronóstico e inteligencia artificial.
         </p>
-                <Link href="#contacto" className="px-6 py-3 bg-cyan-500 text-black rounded-full font-semibold hover:bg-cyan-400 transition">
-          Hablemos
-        </Link>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+  <Link
+    href="#contacto"
+    className="px-6 py-3 bg-cyan-500 text-black rounded-full font-semibold transition-all duration-300 hover:bg-cyan-400 hover:scale-105 shadow-md hover:shadow-cyan-400/40"
+  >
+    Trabajemos juntos
+  </Link>
+  <Link
+    href="#contacto"
+    className="px-6 py-3 border border-cyan-500 text-cyan-400 rounded-full font-semibold transition-all duration-300  hover:scale-105 shadow-md hover:shadow-cyan-400/40"
+  >
+    Ver nuestro trabajo
+  </Link>
+</div>
+
       </section>
+    <ParallaxProvider scrollAxis="horizontal">
  <section id="quehacemos" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white w-full">
+  
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
              <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">¿Qué hacemos?</h2>
@@ -56,6 +71,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+                </ParallaxProvider>
+
        {/* Sección 3: Casos de éxito / Impacto */}
  <section id="casos" className="relative z-10 py-32 px-6 md:px-0 bg-black overflow-hidden w-full">
         <div className="absolute inset-0 opacity-10 blur-3xl">
@@ -96,6 +113,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }
