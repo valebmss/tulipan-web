@@ -1,9 +1,30 @@
 @import "tailwindcss";
+@import url(https://db.onlinewebfonts.com/c/210964871460a264e56c639a599e378a?family=PP+Formula+Semi+Extended+Bold);
+@font-face {
+    font-family: "PP Formula Semi Extended Bold";
+    src: url("https://db.onlinewebfonts.com/t/210964871460a264e56c639a599e378a.eot");
+    src: url("https://db.onlinewebfonts.com/t/210964871460a264e56c639a599e378a.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/210964871460a264e56c639a599e378a.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/210964871460a264e56c639a599e378a.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/210964871460a264e56c639a599e378a.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/210964871460a264e56c639a599e378a.svg#PP Formula Semi Extended Bold")format("svg");
+}
 
+@import url(https://db.onlinewebfonts.com/c/110de0bbe7344f96136d5cedd6608f9d?family=GT+Cinetype+Regular);
+@font-face {
+    font-family: "GT Cinetype Regular";
+    src: url("https://db.onlinewebfonts.com/t/110de0bbe7344f96136d5cedd6608f9d.eot");
+    src: url("https://db.onlinewebfonts.com/t/110de0bbe7344f96136d5cedd6608f9d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/110de0bbe7344f96136d5cedd6608f9d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/110de0bbe7344f96136d5cedd6608f9d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/110de0bbe7344f96136d5cedd6608f9d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/110de0bbe7344f96136d5cedd6608f9d.svg#GT Cinetype Regular")format("svg");
+}
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui;
+  --font-sans: 'GT Cinetype Regular', ui-sans-serif, system-ui;
+  --font-titles: 'PP Formula Semi Extended Bold', ui-sans-serif, system-ui;
 }
 
 
@@ -22,7 +43,11 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titles);
 }

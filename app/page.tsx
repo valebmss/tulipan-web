@@ -89,7 +89,7 @@ export default function Home() {
        <section id="sobrenosotros" className="relative z-10 py-24 px-6 md:px-20 bg-black text-white w-full">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Quiénes Somos</h2>
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">Quiénes Somos</h1>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto">
                 Tulipán es un laboratorio de matemáticas aplicadas e inteligencia artificial. Diseñamos modelos a medida y herramientas digitales que aumentan los ingresos, reducen costos y desbloquean nuevas oportunidades en diversas industrias.
               </p>
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-          <section id="capacidad" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
+ <section id="capacidad" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
               <motion.h2 
@@ -107,7 +107,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.8 }} 
                 viewport={{ once: true }}
-                className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight"
+                className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight"
               >
                 Hecho para la Complejidad. Diseñado para el Impacto.
               </motion.h2>
@@ -124,13 +124,13 @@ export default function Home() {
             <div className="relative flex items-center justify-center">
               <button
                 onClick={() => scroll("left")}
-                className="absolute left-0 z-20 bg-cyan-500 text-black rounded-full p-3 hover:bg-cyan-400 shadow-lg"
+                className="absolute -left-6 z-20 bg-black border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black transition-all duration-300 p-2 rounded-xl shadow-lg"
               >
-                <FaChevronLeft size={20} />
+                <FaChevronLeft size={22} />
               </button>
               <div
                 ref={scrollContainerRef}
-                className="flex overflow-x-auto gap-10 snap-x scroll-smooth px-10 max-w-full hide-scroll-bar"
+                className="flex overflow-x-auto gap-10 snap-x scroll-smooth px-10 max-w-full hide-scroll-bar  border-cyan-500"
                 style={{ scrollbarWidth: "none" }}
               >
                 {cards.map((item, i) => (
@@ -139,9 +139,13 @@ export default function Home() {
                     whileHover={{ scale: 1.07 }}
                     className="min-w-[380px] md:min-w-[460px] max-w-sm bg-gradient-to-br from-black/70 to-cyan-900/10 border border-cyan-400/10 rounded-3xl p-10 shadow-2xl transition-all duration-500 snap-center group relative cursor-pointer overflow-hidden"
                   >
-                    <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{item.title}</h3>
-                    <div className="absolute inset-0 bg-black/90 rounded-3xl opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-500 flex items-center justify-center">
-                      <ul className="text-base text-gray-300 space-y-2 list-disc list-inside">
+                    <div className="z-30 relative">
+                      <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 mb-4">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <div className="absolute inset-0 bg-black/90 rounded-3xl opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-500 flex flex-col justify-start items-start pt-20">
+                      <ul className="text-base text-gray-300 space-y-2 list-disc list-inside z-10">
                         {item.content.map((text, j) => (
                           <li key={j}>{text}</li>
                         ))}
@@ -152,9 +156,9 @@ export default function Home() {
               </div>
               <button
                 onClick={() => scroll("right")}
-                className="absolute right-0 z-20 bg-cyan-500 text-black rounded-full p-3 hover:bg-cyan-400 shadow-lg"
+                className="absolute -right-6 z-20 bg-black border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black transition-all duration-300 p-2 rounded-xl shadow-lg"
               >
-                <FaChevronRight size={20} />
+                <FaChevronRight size={22} />
               </button>
             </div>
           </div>
