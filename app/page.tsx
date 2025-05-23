@@ -356,24 +356,27 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-10 relative max-w-5xl mx-auto">
-            {fases.map((fase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="relative bg-gradient-to-br from-black/60 to-cyan-900/20 backdrop-blur-md p-6 rounded-2xl border border-cyan-500/20 shadow-xl flex-1 min-w-[220px] max-w-[280px]"
-              >
-                <div className="absolute top-0 left-0 w-1 h-full bg-cyan-500 rounded-full" style={{ transform: `translateX(-50%)` }} />
-                <h3 className="text-xl font-semibold text-cyan-400 mb-3">{fase.title}</h3>
-                <p className="text-sm text-gray-300">{fase.description}</p>
-              </motion.div>
-            ))}
+          <div className="relative flex justify-center w-full overflow-hidden">
+            <div className="flex items-center justify-center relative w-full max-w-5xl">
+              <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-cyan-500/10 via-cyan-500 to-cyan-500/10 z-0" />
+              {fases.map((fase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="relative z-10 bg-gradient-to-br from-black/70 to-cyan-900/20 backdrop-blur p-6 rounded-2xl border border-cyan-500/20 shadow-xl w-[260px] text-center mx-4"
+                >
+                  <div className="w-10 h-10 mx-auto mb-4 rounded-full border-2 border-cyan-500 text-cyan-400 flex items-center justify-center font-bold text-sm">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">{fase.title}</h3>
+                  <p className="text-sm text-gray-300 leading-relaxed">{fase.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-
-          <div className="absolute left-1/2 top-full mt-12 w-1 h-16 bg-cyan-500 rounded-full animate-pulse opacity-40" style={{ transform: 'translateX(-50%)' }} />
         </div>
       </section>
       <section
