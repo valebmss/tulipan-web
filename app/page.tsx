@@ -134,24 +134,36 @@ export default function Home() {
                 style={{ scrollbarWidth: "none" }}
               >
                 {cards.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ scale: 1.07 }}
-                    className="min-w-[380px] md:min-w-[460px] max-w-sm bg-gradient-to-br from-black/70 to-cyan-900/10 border border-cyan-400/10 rounded-3xl p-10 shadow-2xl transition-all duration-500 snap-center group relative cursor-pointer overflow-hidden"
-                  >
-                    <div className="z-30 relative">
-                      <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 mb-4">
-                        {item.title}
-                      </h3>
-                    </div>
-                    <div className="absolute inset-0 bg-black/90 rounded-3xl opacity-0 group-hover:opacity-100 p-6 transition-opacity duration-500 flex flex-col justify-start items-start pt-20">
-                      <ul className="text-base text-gray-300 space-y-2 list-disc list-inside z-10">
-                        {item.content.map((text, j) => (
-                          <li key={j}>{text}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
+<motion.div
+  key={i}
+  layout
+  initial={{ borderRadius: "1.5rem" }}
+  whileHover={{ scale: 1.03 }}
+  transition={{ duration: 0.4 }}
+  className="min-w-[280px] md:min-w-[400px] max-w-sm bg-gradient-to-br from-black/70 to-cyan-900/10 border border-cyan-400/10 rounded-3xl p-8 shadow-2xl snap-center group relative cursor-pointer"
+>
+  <div className="z-30 relative">
+    <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+      {item.title}
+    </h3>
+  </div>
+
+  <motion.div
+    layout
+    initial={{ opacity: 0 }}
+    whileHover={{ opacity: 1 }}
+    transition={{ duration: 0.4, delay: 0.1 }}
+    className="mt-4"
+  >
+    <ul className="text-base text-gray-300 space-y-2 list-disc list-inside z-10">
+      {item.content.map((text, j) => (
+        <li key={j}>{text}</li>
+      ))}
+    </ul>
+  </motion.div>
+</motion.div>
+
+
                 ))}
               </div>
               <button
