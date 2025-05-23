@@ -333,7 +333,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="metodologia" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
+
+     <section id="metodologia" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <motion.h2
@@ -356,9 +357,9 @@ export default function Home() {
             </motion.p>
           </div>
 
-          <div className="relative flex justify-center w-full overflow-hidden">
-            <div className="flex items-center justify-center relative w-full max-w-5xl">
-              <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-cyan-500/10 via-cyan-500 to-cyan-500/10 z-0" />
+          <div className="relative w-full max-w-6xl mx-auto px-2 md:px-0">
+            <div className="hidden md:flex items-center justify-between relative">
+              <div className="absolute top-10 left-0 w-full h-1 bg-cyan-800/30 z-0" />
               {fases.map((fase, index) => (
                 <motion.div
                   key={index}
@@ -366,7 +367,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="relative z-10 bg-gradient-to-br from-black/70 to-cyan-900/20 backdrop-blur p-6 rounded-2xl border border-cyan-500/20 shadow-xl w-[260px] text-center mx-4"
+                  className="relative z-10 bg-gradient-to-br from-black/80 to-cyan-900/10 backdrop-blur p-6 rounded-2xl border border-cyan-500/20 shadow-xl w-64 text-center"
                 >
                   <div className="w-10 h-10 mx-auto mb-4 rounded-full border-2 border-cyan-500 text-cyan-400 flex items-center justify-center font-bold text-sm">
                     {index + 1}
@@ -376,13 +377,32 @@ export default function Home() {
                 </motion.div>
               ))}
             </div>
+
+            <div className="flex md:hidden flex-col gap-6">
+              {fases.map((fase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-black/80 to-cyan-900/10 backdrop-blur p-6 rounded-2xl border border-cyan-500/20 shadow-xl text-left"
+                >
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="w-8 h-8 rounded-full border-2 border-cyan-500 text-cyan-400 flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <h3 className="text-lg font-semibold text-cyan-400">{fase.title}</h3>
+                  </div>
+                  <p className="text-sm text-gray-300 leading-relaxed">{fase.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-      <section
-        id="diferenciales"
-        className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full"
-      >
+
+      <section id="diferenciales" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
