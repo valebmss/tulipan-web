@@ -333,10 +333,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section
-        id="metodologia"
-        className="relative z-10 py-32 px-6 md:px-10 bg-neutral-900 text-white w-full"
-      >
+      <section id="metodologia" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <motion.h2
@@ -355,28 +352,28 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              Nuestro proceso está diseñado para entregar impacto tangible
-              rápidamente.
+              Nuestro proceso está diseñado para entregar impacto tangible rápidamente.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 relative max-w-5xl mx-auto">
             {fases.map((fase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white/5 p-6 rounded-2xl border border-cyan-500/10 hover:border-cyan-500 hover:shadow-xl transition-all duration-300"
+                className="relative bg-gradient-to-br from-black/60 to-cyan-900/20 backdrop-blur-md p-6 rounded-2xl border border-cyan-500/20 shadow-xl flex-1 min-w-[220px] max-w-[280px]"
               >
-                <h3 className="text-xl font-semibold text-cyan-400 mb-2">
-                  {fase.title}
-                </h3>
-                <p className="text-gray-300 text-sm">{fase.description}</p>
+                <div className="absolute top-0 left-0 w-1 h-full bg-cyan-500 rounded-full" style={{ transform: `translateX(-50%)` }} />
+                <h3 className="text-xl font-semibold text-cyan-400 mb-3">{fase.title}</h3>
+                <p className="text-sm text-gray-300">{fase.description}</p>
               </motion.div>
             ))}
           </div>
+
+          <div className="absolute left-1/2 top-full mt-12 w-1 h-16 bg-cyan-500 rounded-full animate-pulse opacity-40" style={{ transform: 'translateX(-50%)' }} />
         </div>
       </section>
       <section
