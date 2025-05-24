@@ -89,7 +89,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="relative min-h-screen w-full items-center justify-center px-6 pt-32 md:pt-24 overflow-hidden ">
+    <main className="relative min-h-screen w-full items-center justify-center pt-32 md:pt-24 overflow-hidden ">
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
 
       <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
       <section
         id="sobrenosotros"
-        className="relative z-10 py-28 px-6 md:px-20b bg-neutral-900 text-white w-full overflow-hidden"
+        className="relative z-10 py-28  bg-neutral-900 text-white w-full overflow-hidden"
       >
         {/* Fondo decorativo suave */}
         <div className="absolute inset-0 z-0 opacity-10 blur-3xl">
@@ -190,7 +190,7 @@ export default function Home() {
 
       <section
         id="capacidad"
-        className="relative z-10 py-32 px-6 md:px-10 bg-neutral-900 text-white w-full"
+        className="relative z-10 py-32  bg-neutral-900 text-white w-full"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -272,7 +272,7 @@ export default function Home() {
       {/* Sección 3: Casos de éxito / Impacto */}
       <section
         id="casos"
-        className="relative z-10 py-32 px-6 md:px-0 bg-neutral-900 overflow-hidden w-full"
+        className="relative z-10 py-32  bg-neutral-900 overflow-hidden w-full"
       >
         <div className="absolute inset-0 opacity-10 blur-3xl">
           <div className="w-[40rem] h-[40rem] bg-cyan-500 rounded-full absolute -top-10 -left-10 mix-blend-screen animate-pulse" />
@@ -334,7 +334,7 @@ export default function Home() {
         </div>
       </section>
 
-     <section id="metodologia" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
+     <section id="metodologia" className="relative z-10 py-32  bg-black text-white w-full">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <motion.h2
@@ -402,7 +402,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="diferenciales" className="relative z-10 py-32 px-6 md:px-10 bg-black text-white w-full">
+      <section id="diferenciales" className="relative z-10 py-32  bg-black text-white w-full">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
