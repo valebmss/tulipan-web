@@ -9,7 +9,7 @@ export default function Header() {
   <img
     src="/logos/Tulipan_Blanco.png" // asegúrate que esté en /public
     alt="Tulipán"
-    className="h-8 w-auto"
+    className="h-18 w-auto"
   />
 </Link>
 
