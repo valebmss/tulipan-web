@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
+
 import dynamicImport from "next/dynamic";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -270,69 +271,80 @@ export default function Home() {
       </section>
 
       {/* Sección 3: Casos de éxito / Impacto */}
-      <section
-        id="casos"
-        className="relative z-10 py-32  bg-neutral-900 overflow-hidden w-full"
+    <section
+  id="casos"
+  className="relative z-10 py-32 bg-neutral-950 overflow-hidden w-full"
+>
+  {/* Fondo decorativo animado */}
+  <div className="absolute inset-0 opacity-5 blur-2xl pointer-events-none z-0">
+    <div className="w-[45rem] h-[45rem] bg-cyan-500/40 rounded-full absolute -top-20 -left-32 mix-blend-screen animate-pulse" />
+    <div className="w-[30rem] h-[30rem] bg-purple-600/40 rounded-full absolute top-48 right-0 mix-blend-screen animate-pulse" />
+  </div>
+
+  <div className="relative max-w-7xl mx-auto px-6 md:px-20 z-10">
+    <div className="text-center mb-20">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight text-white"
       >
-        <div className="absolute inset-0 opacity-10 blur-3xl">
-          <div className="w-[40rem] h-[40rem] bg-cyan-500 rounded-full absolute -top-10 -left-10 mix-blend-screen animate-pulse" />
-          <div className="w-[30rem] h-[30rem] bg-purple-500 rounded-full absolute top-40 right-0 mix-blend-screen animate-pulse" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-6 md:px-20">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">
-              Impacto real, resultados comprobables
-            </h2>
-            <p className="text-lg text-gray-400">
-              Confiado por líderes en distintas industrias para resolver sus
-              retos más complejos.
-            </p>
+        Impacto real, resultados comprobables
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-lg text-gray-400 max-w-3xl mx-auto"
+      >
+        Confiado por líderes de múltiples industrias para resolver sus retos más complejos.
+      </motion.p>
+    </div>
+
+    {/* Casos */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          cliente: "Grupo Diana",
+          resultado: "+20.3% en ventas con rutas dinámicas",
+          logo: "/logos/logo-diana.png",
+        },
+        {
+          cliente: "Copa Airlines",
+          resultado: "-20% de tiempo en tierra optimizando colas",
+          logo: "/logos/copa-airlines-logo.png",
+        },
+        {
+          cliente: "Falabella",
+          resultado: "Forecast de demanda con IA para optimizar inventario",
+          logo: "/logos/falabella.svg",
+        },
+      ].map((caso, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 * i, duration: 0.8 }}
+          whileHover={{ scale: 1.05, rotateX: 2, rotateY: -2 }}
+          className="group bg-gradient-to-br from-neutral-800 via-neutral-900 to-black rounded-2xl border border-cyan-400/10 backdrop-blur p-6 shadow-xl hover:shadow-cyan-500/10 transition-all"
+        >
+          <div className="flex items-center justify-between mb-4">
+            <img
+              src={caso.logo}
+              alt={caso.cliente}
+              className="h-10 opacity-80 group-hover:opacity-100 transition duration-300"
+            />
+            <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
           </div>
-          <div className="flex flex-col md:flex-row gap-10 md:gap-6 items-stretch justify-center">
-            {[
-              {
-                cliente: "Grupo Diana",
-                resultado: "+20.3% en ventas con rutas dinámicas",
-                logo: "/logos/logo-diana.png",
-                fondo: "",
-              },
-              {
-                cliente: "Copa Airlines",
-                resultado: "-20% de tiempo en tierra optimizando colas",
-                logo: "/logos/copa-airlines-logo.png",
-                fondo: "",
-              },
-              {
-                cliente: "Falabella",
-                resultado:
-                  "Forecast de demanda con IA para optimizar inventario",
-                logo: "/logos/falabella.svg",
-                fondo: "",
-              },
-            ].map((caso, i) => (
-              <div
-                key={i}
-                className={`group relative ${caso.fondo} border border-white/10 p-8 rounded-2xl shadow-xl hover:shadow-cyan-500/10 transition-all backdrop-blur-lg w-full`}
-              >
-                <div className="flex flex-col  items-start gap-4 mb-4">
-                  <img
-                    src={caso.logo}
-                    alt={caso.cliente}
-                    className="h-10 w-auto opacity-80 group-hover:opacity-100 transition duration-300"
-                  />
-                  <span className="text-sm uppercase tracking-wider text-gray-400">
-                    {caso.cliente}
-                  </span>
-                </div>
-                <p className="text-xl font-semibold text-white leading-snug">
-                  {caso.resultado}
-                </p>
-                <div className="absolute -top-3 -right-3 w-5 h-5 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <h3 className="text-lg font-semibold text-white mb-2">
+            {caso.cliente}
+          </h3>
+          <p className="text-gray-300 text-base">{caso.resultado}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
      <section id="metodologia" className="relative z-10 py-32  bg-black text-white w-full">
         <div className="max-w-7xl mx-auto">
