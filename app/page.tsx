@@ -235,7 +235,7 @@ export default function Home() {
                   initial={{ borderRadius: "1.5rem" }}
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.4 }}
-                  className="min-w-full md:min-w-[50%] max-w-[600px] bg-gradient-to-br from-black/70 to-cyan-900/10 border border-cyan-400/10 rounded-3xl p-8 shadow-2xl snap-center group relative cursor-pointer"
+                  className="min-w-full md:min-w-[50%] max-w-[600px]  border border-cyan-400/10 rounded-3xl p-8 shadow-2xl snap-center group relative cursor-pointer"
                 >
                   <div className="z-30 relative">
                     <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
@@ -271,14 +271,14 @@ export default function Home() {
       </section>
 
       {/* Sección 3: Casos de éxito / Impacto */}
-    <section
+   <section
   id="casos"
   className="relative z-10 py-32 bg-neutral-950 overflow-hidden w-full"
 >
-  {/* Fondo decorativo animado */}
-  <div className="absolute inset-0 opacity-5 blur-2xl pointer-events-none z-0">
-    <div className="w-[45rem] h-[45rem] bg-cyan-500/40 rounded-full absolute -top-20 -left-32 mix-blend-screen animate-pulse" />
-    <div className="w-[30rem] h-[30rem] bg-purple-600/40 rounded-full absolute top-48 right-0 mix-blend-screen animate-pulse" />
+  {/* Fondo decorativo animado sutil */}
+  <div className="absolute inset-0 opacity-10 blur-3xl pointer-events-none z-0">
+    <div className="w-[35rem] h-[35rem] bg-cyan-500/20 rounded-full absolute -top-10 -left-24 mix-blend-lighten" />
+    <div className="w-[25rem] h-[25rem] bg-purple-500/20 rounded-full absolute top-52 right-0 mix-blend-lighten" />
   </div>
 
   <div className="relative max-w-7xl mx-auto px-6 md:px-20 z-10">
@@ -287,7 +287,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight text-white"
+        className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white"
       >
         Impacto real, resultados comprobables
       </motion.h2>
@@ -295,14 +295,14 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-lg text-gray-400 max-w-3xl mx-auto"
+        className="text-lg text-gray-400 max-w-2xl mx-auto"
       >
-        Confiado por líderes de múltiples industrias para resolver sus retos más complejos.
+        Organizaciones líderes nos confían la solución de sus desafíos más ambiciosos.
       </motion.p>
     </div>
 
-    {/* Casos */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {/* Cards de casos */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
       {[
         {
           cliente: "Grupo Diana",
@@ -322,97 +322,35 @@ export default function Home() {
       ].map((caso, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 * i, duration: 0.8 }}
-          whileHover={{ scale: 1.05, rotateX: 2, rotateY: -2 }}
-          className="group bg-gradient-to-br from-neutral-800 via-neutral-900 to-black rounded-2xl border border-cyan-400/10 backdrop-blur p-6 shadow-xl hover:shadow-cyan-500/10 transition-all"
+          whileHover={{
+            scale: 1.03,
+            boxShadow: "0 0 20px rgba(6,182,212,0.2)",
+            borderColor: "rgba(6,182,212,0.5)",
+          }}
+          transition={{ duration: 0.4, delay: 0.1 * i }}
+          className="group bg-neutral-900 border border-white/10 rounded-xl p-6 shadow-md transition-all duration-300"
         >
           <div className="flex items-center justify-between mb-4">
             <img
               src={caso.logo}
               alt={caso.cliente}
-              className="h-10 opacity-80 group-hover:opacity-100 transition duration-300"
+              className="h-10 w-auto object-contain opacity-80 group-hover:opacity-100 transition"
             />
-            <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+            <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse opacity-60" />
           </div>
-          <h3 className="text-lg font-semibold text-white mb-2">
+          <h3 className="text-xl font-semibold text-white mb-2">
             {caso.cliente}
           </h3>
-          <p className="text-gray-300 text-base">{caso.resultado}</p>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            {caso.resultado}
+          </p>
         </motion.div>
       ))}
     </div>
   </div>
 </section>
-
-     <section id="metodologia" className="relative z-10 py-32  bg-black text-white w-full">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight"
-            >
-              De los Datos al Despliegue en Cuestión de Semanas
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-xl text-gray-300 max-w-4xl mx-auto"
-            >
-              Nuestro proceso está diseñado para entregar impacto tangible rápidamente.
-            </motion.p>
-          </div>
-
-          <div className="relative w-full max-w-6xl mx-auto px-2 md:px-0">
-            <div className="hidden md:flex items-center justify-between relative">
-              <div className="absolute top-10 left-0 w-full h-1 bg-cyan-800/30 z-0" />
-              {fases.map((fase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="relative z-10 bg-gradient-to-br from-black/80 to-cyan-900/10 backdrop-blur p-6 rounded-2xl border border-cyan-500/20 shadow-xl w-64 text-center"
-                >
-                  <div className="w-10 h-10 mx-auto mb-4 rounded-full border-2 border-cyan-500 text-cyan-400 flex items-center justify-center font-bold text-sm">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">{fase.title}</h3>
-                  <p className="text-sm text-gray-300 leading-relaxed">{fase.description}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="flex md:hidden flex-col gap-6">
-              {fases.map((fase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-black/80 to-cyan-900/10 backdrop-blur p-6 rounded-2xl border border-cyan-500/20 shadow-xl text-left"
-                >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-8 h-8 rounded-full border-2 border-cyan-500 text-cyan-400 flex items-center justify-center font-bold text-sm">
-                      {index + 1}
-                    </div>
-                    <h3 className="text-lg font-semibold text-cyan-400">{fase.title}</h3>
-                  </div>
-                  <p className="text-sm text-gray-300 leading-relaxed">{fase.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section id="diferenciales" className="relative z-10 py-32  bg-black text-white w-full">
         <div className="max-w-5xl mx-auto text-center">
