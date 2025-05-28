@@ -368,7 +368,7 @@ export default function Home() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
-                  className="text-center text-2xl md:text-4xl font-bold text-pink-300 leading-snug"
+                  className="text-center text-2xl md:text-4xl font-bold text-cyan-400 leading-snug"
                 >
                   Trusted by<br />
                   leading data<br />
