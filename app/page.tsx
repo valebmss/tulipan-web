@@ -22,7 +22,7 @@ export default function Home() {
     }
   };
 
-  const logos = Array.from({ length: 34 }, (_, i) => ({
+  const logos = Array.from({ length: 33 }, (_, i) => ({
     src: `/logos/logo-${i + 1}.png`, // ejemplo: /public/logos/logo-1.png, etc.
     alt: `Logo ${i + 1}`,
   }));
@@ -381,12 +381,12 @@ export default function Home() {
           return (
             <div
               key={i}
-              className="h-20 flex items-center justify-center bg-[#111] px-4"
+              className="h-20 flex items-center justify-center bg-[#111] px-4 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-h-6 w-auto opacity-80 hover:opacity-100 transition duration-200"
+    className="max-h-6 w-auto opacity-80"
               />
             </div>
           );
