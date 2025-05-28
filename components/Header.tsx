@@ -7,7 +7,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full px-6 md:px-10 py-4 bg-black/70 backdrop-blur-sm z-50 flex justify-between items-center border-b border-white/10">
 <Link href="/" className="flex items-center">
   <img
-    src="/logos/Tulipan_Blanco.png" // asegúrate que esté en /public
+    src="/logos/Tulipann.png" // asegúrate que esté en /public
     alt="Tulipán"
     className="h-18 w-auto"
   />

@@ -1,4 +1,5 @@
 "use client";
+import { useTranslation } from 'next-i18next';
 
 export const dynamic = "force-dynamic";
 
@@ -93,13 +94,15 @@ export default function Home() {
     "Nos movemos rápido y nos encantan los retos complejos",
   ];
   const centerIndex = 14; // donde se insertará el bloque de texto
+    const { t, i18n } = useTranslation('common');
+
 
   return (
     <main className="relative min-h-screen w-full items-center justify-center pt-32 md:pt-24 overflow-hidden ">
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
       <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
         <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-          IA y Optimización que Impulsan los Negocios. <br />
+           {t('hero_title')} <br />
           <span className="text-cyan-400">con matemáticas</span>.
         </h1>
         <motion.p
@@ -133,6 +136,9 @@ export default function Home() {
         id="sobrenosotros"
         className="relative z-10 py-28  bg-neutral-900 text-white w-full overflow-hidden"
       >
+              <button onClick={() => i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es')}>
+        Cambiar idioma
+      </button>
         {/* Fondo decorativo suave */}
         <div className="absolute inset-0 z-0 opacity-10 blur-3xl">
           <div className="w-[35rem] h-[35rem] bg-cyan-500/30 rounded-full absolute -top-10 -left-20 mix-blend-lighten animate-pulse" />
