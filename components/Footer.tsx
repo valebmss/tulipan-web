@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-neutral-900 text-gray-400 py-10 px-6 md:px-20 text-sm mt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         <div>
-          <p className="font-semibold text-white">Tulipán</p>
+          <p className="font-semibold text-white">Tulipán 1637</p>
           <p className="mt-2">© {new Date().getFullYear()} Todos los derechos reservados.</p>
         </div>
         <div className="space-y-1">
@@ -12,8 +12,6 @@ export default function Footer() {
           <p><a href="#" className="hover:text-white">Contacto</a></p>
         </div>
         <div className="space-y-1">
-          <p>🇨🇴 Colombia</p>
-          <p>🇩🇪 Alemania</p>
           <p><a href="mailto:hello@tulipan.ai" className="hover:text-white">hello@tulipan.ai</a></p>
         </div>
       </div>
