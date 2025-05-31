@@ -5,13 +5,11 @@ import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import Switcher from "@/components/switcher";
-import { ParallaxProvider } from "react-scroll-parallax";
+
 
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 export default function HomeClient({ dict }: { dict: any }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
 
@@ -164,7 +162,7 @@ export default function HomeClient({ dict }: { dict: any }) {
               className="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth px-4 md:px-10 hide-scroll-bar"
               style={{ scrollbarWidth: "none" }}
             >
-              {cards.map((item, i) => (
+              {cards.map((item :any, i:number) => (
                 <motion.div
                   key={i}
                   layout
