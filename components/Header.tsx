@@ -74,16 +74,28 @@ export default function Header({ dict }: HeaderProps) {
       </div>
 
       {/* Menú colapsable solo en móviles */}
-      <nav
-        className={`md:hidden flex-col absolute top-20 left-0 w-full bg-black/90 px-6 py-4 space-y-4 text-sm text-gray-300 transition-all duration-300 z-40 ${
-          menuOpen ? 'flex' : 'hidden'
-        }`}
-      >
-        <Link href="#quehacemos" onClick={() => setMenuOpen(false)}>{dict.nav_quehacemos}</Link>
-        <Link href="#casos" onClick={() => setMenuOpen(false)}>{dict.nav_casos}</Link>
-        <Link href="#equipo" onClick={() => setMenuOpen(false)}>{dict.nav_equipo}</Link>
-        <Link href="#contacto" onClick={() => setMenuOpen(false)}>{dict.nav_contacto}</Link>
-      </nav>
+<nav
+  className={`md:hidden flex-col absolute left-0 w-full bg-black/90 px-6 py-4 space-y-4 text-sm text-gray-300 transition-all duration-300 z-40 ${
+    menuOpen ? 'flex animate-fade-in-down' : 'hidden'
+  }`}
+>
+  {[
+    { href: "#quehacemos", label: dict.nav_quehacemos },
+    { href: "#casos", label: dict.nav_casos },
+    { href: "#equipo", label: dict.nav_equipo },
+    { href: "#contacto", label: dict.nav_contacto },
+  ].map((item, index) => (
+    <Link
+      key={index}
+      href={item.href}
+      onClick={() => setMenuOpen(false)}
+      className="text-white px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 hover:pl-6 hover:text-cyan-400"
+    >
+      {item.label}
+    </Link>
+  ))}
+</nav>
+
     </header>
   );
 }
