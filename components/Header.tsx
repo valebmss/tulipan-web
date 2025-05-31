@@ -48,7 +48,7 @@ export default function Header({ dict }: HeaderProps) {
         {/* Logo + Language (Mobile Only) */}
         <div className="flex items-center gap-4">
           <Link href={`/${currentLang}`} className="flex items-center">
-            <img src="/logos/Tulipann.png" alt="Tulipán" className="h-10 w-auto" />
+            <img src="/logos/Tulipann.png" alt="Tulipán" className="w-12 w-auto" />
           </Link>
           {/* Language switcher visible SOLO en móviles */}
           <div className="md:hidden ml-10">{LanguageSwitcher}</div>
