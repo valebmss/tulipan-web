@@ -5,24 +5,22 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Tulipan 1637",
-  };
-}
-
 export default async function Layout({
   children,
   params,
 }: {
   children: ReactNode;
-  params: { lang: string }; // usa string y haces cast luego
+  params: Promise<{ lang: string | string[] | undefined }>;
 }) {
-  const lang = params.lang as "es" | "en";
-  const dict = await getDictionary(lang);
+  const resolvedParams = await params;
+  const rawLang = resolvedParams.lang;
+  const lang = Array.isArray(rawLang) ? rawLang[0] : rawLang;
+  const safeLang = lang === "es" || lang === "en" ? lang : "es";
+
+  const dict = await getDictionary(safeLang);
 
   return (
-    <html lang={lang}>
+    <html lang={safeLang}>
       <body>
         <Header dict={dict} />
         {children}
@@ -31,3 +29,4 @@ export default async function Layout({
     </html>
   );
 }
+
