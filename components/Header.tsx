@@ -56,7 +56,7 @@ export default function Header({ dict }: HeaderProps) {
 
         {/* Botón hamburguesa en móviles */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white h-10"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
