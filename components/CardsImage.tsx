@@ -1,8 +1,9 @@
 "use client";
 
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, useMediaQuery } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
 import { motion } from "framer-motion";
+import { useTheme } from "@mui/material/styles";
 
 type Card = {
   title: string;
@@ -24,10 +25,15 @@ const imagePaths = [
 ];
 
 export default function HeroCards({ dict }: Props) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <Box sx={{ width: "90%", minHeight: 829, bgcolor: "transparent", py: 8 }}>
+    <Box sx={{ width: "100%", px: { xs: 2, sm: 4 }, py: 8, bgcolor: "transparent" }}>
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-white">{dict.impact_title}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          {dict.impact_title}
+        </h2>
       </div>
 
       <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }} spacing={2}>
@@ -67,14 +73,14 @@ export default function HeroCards({ dict }: Props) {
                 alt={card.title}
                 style={{
                   width: "100%",
-                  height: [1, 3].includes(i) ? "320px" : "180px",
+                  height: isMobile ? "180px" : [1, 3].includes(i) ? "320px" : "200px",
                   objectFit: "cover",
                   borderRadius: "8px",
                   marginBottom: "16px",
                 }}
               />
 
-              <h3 className="text-xl font-semibold text-white mb-2 mt-4">
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 mt-4">
                 {card.title}
               </h3>
 
