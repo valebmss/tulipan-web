@@ -33,6 +33,7 @@ export default function HomeClient({ dict }: { dict: any }) {
   const centerIndex = 14;
 
   return (
+    <div>
     <main className="relative min-h-screen w-full items-center justify-center pt-32 md:pt-24 overflow-hidden ">
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
       <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
@@ -65,6 +66,8 @@ export default function HomeClient({ dict }: { dict: any }) {
           </Link>
         </div>
       </section>
+          </main>
+
       <section
         id="sobrenosotros"
         className="relative z-10 py-28  bg-neutral-900 text-white w-full overflow-hidden"
@@ -287,8 +290,8 @@ export default function HomeClient({ dict }: { dict: any }) {
           </div>
         </div>
       </section>
-
+</div>
       
-    </main>
+
   );
 }
