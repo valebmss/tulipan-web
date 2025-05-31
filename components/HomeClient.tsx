@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import HeroCards from "./CardsImage";
 import OurTeam from "./ourteam";
+import Asesores from "./asesores";
 
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
@@ -115,6 +116,7 @@ export default function HomeClient({ dict }: { dict: any }) {
             </motion.p>
           </motion.div>
           <OurTeam dict={dict} />
+          <Asesores dict={dict} />
         </div>
       </section>
       <section
@@ -122,7 +124,7 @@ export default function HomeClient({ dict }: { dict: any }) {
         className="relative z-10   bg-neutral-900 text-white w-full"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">
-                      <div className="text-center mb-8">
+          <div className="text-center mb-8">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +141,7 @@ export default function HomeClient({ dict }: { dict: any }) {
             >
               {dict.impact_title}
             </motion.h3>
-                        <motion.p
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -147,12 +149,10 @@ export default function HomeClient({ dict }: { dict: any }) {
             >
               {dict.impact_subtitle}
             </motion.p>
-                    </div>
+          </div>
 
           <HeroCards dict={dict} />
         </div>
-
-
       </section>
       {/* Sección 3: Casos de éxito / Impacto */}
       <section
@@ -183,7 +183,7 @@ export default function HomeClient({ dict }: { dict: any }) {
             >
               {dict.impact_title}
             </motion.p>
-                        <motion.p
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
