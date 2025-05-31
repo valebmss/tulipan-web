@@ -154,96 +154,74 @@ export default function HomeClient({ dict }: { dict: any }) {
           <HeroCards dict={dict} />
         </div>
       </section>
-      {/* Sección 3: Casos de éxito / Impacto */}
+      {/* Sección 4: Casos de éxito / Impacto */}
       <section
-        id="casos"
-        className="relative z-10 py-32 bg-neutral-950 overflow-hidden w-full"
+        id="proceso"
+        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
       >
-        {/* Fondo decorativo animado sutil */}
-        <div className="absolute inset-0 opacity-10 blur-3xl pointer-events-none z-0">
-          <div className="w-[35rem] h-[35rem] bg-cyan-500/20 rounded-full absolute -top-10 -left-24 mix-blend-lighten" />
-          <div className="w-[25rem] h-[25rem] bg-purple-500/20 rounded-full absolute top-52 right-0 mix-blend-lighten" />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-6 md:px-20 z-10">
-          <div className="text-center mb-20">
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          <div className="text-center mb-8">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className=" text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight"
+              className="text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight "
             >
-              {dict.nav_quehacemos}
+              {dict.how_we_work_title}
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg text-gray-400 max-w-2xl mx-auto"
-            >
-              {dict.impact_title}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg text-gray-400 max-w-2xl mx-auto"
-            >
-              {dict.impact_subtitle}
-            </motion.p>
-          </div>
-
-          {/* Cards de casos */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                cliente: "Grupo Diana",
-                resultado: dict.impact_diana,
-                logo: "/logos/logo-diana.png",
-              },
-              {
-                cliente: "Copa Airlines",
-                resultado: dict.impact_copa,
-                logo: "/logos/copa-airlines-logo.png",
-              },
-              {
-                cliente: "Falabella",
-                resultado: dict.impact_falabella,
-                logo: "/logos/falabella.svg",
-              },
-            ].map((caso, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 0 20px rgba(6,182,212,0.2)",
-                  borderColor: "rgba(6,182,212,0.5)",
-                }}
-                transition={{ duration: 0.4, delay: 0.1 * i }}
-                className="group bg-neutral-900 border border-white/10 rounded-xl p-6 shadow-md transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <img
-                    src={caso.logo}
-                    alt={caso.cliente}
-                    className="h-10 w-auto object-contain opacity-80 group-hover:opacity-100 transition"
-                  />
-                  <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse opacity-60" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {caso.cliente}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {caso.resultado}
-                </p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
-      <section className="bg-[#0f0f0f] py-24 px-6 md:px-10 w-full">
+      <section
+        id="casos"
+        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+      >
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          <div className="text-center mb-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight "
+            >
+              {dict.success_cases_title}
+            </motion.h2>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-2xl mt-18 text-gray-200 max-w-2xl mx-auto"
+            >
+              {dict.math_to_results}
+            </motion.h3>
+          </div>
+        </div>
+      </section>
+            <section
+        id="porque_tulipan"
+        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+      >
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          <div className="text-center mb-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight "
+            >
+              {dict.why_tulipan_title}
+            </motion.h2>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-2xl mt-18 text-gray-200 max-w-2xl mx-auto"
+            >
+              {dict.why_tulipan_subtitle}
+            </motion.h3>
+          </div>
+        </div>
+        <section className="bg-[#0f0f0f] py-24 px-6 md:px-10 w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-6 gap-[1px] bg-white/5">
           {logos.map((logo, i) => {
             if (i === centerIndex) {
@@ -283,6 +261,34 @@ export default function HomeClient({ dict }: { dict: any }) {
           })}
         </div>
       </section>
+      </section>
+                  <section
+        id="porque_tulipan"
+        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+      >
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          <div className="text-center mb-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight "
+            >
+              {dict.contact_us}
+            </motion.h2>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-2xl mt-18 text-gray-200 max-w-2xl mx-auto"
+            >
+              {dict.contact_us_title}
+            </motion.h3>
+          </div>
+        </div>
+      </section>
+
+      
     </main>
   );
 }

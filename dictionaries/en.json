@@ -1,10 +1,10 @@
 {
-   "nav_quehacemos": "What we do",
+  "nav_quehacemos": "What we do",
   "nav_casos": "Cases",
   "nav_equipo": "Team",
   "nav_contacto": "Contact",
-    "hero_title": "AI and Optimization that Power Businesses.",
-  "hero_math" : "with mathematics",
+  "hero_title": "AI and Optimization that Power Businesses.",
+  "hero_math": "with mathematics",
   "hero_subtitle": "From airlines to consumer goods, Tulipán helps companies unlock efficiency and growth through custom optimization, forecasting, and artificial intelligence tools.",
   "cta_1": "Let's work together",
   "cta_2": "See our work",
@@ -17,13 +17,30 @@
   "about_p2": "Our team of PhDs, engineers, and developers works closely with clients to deploy powerful solutions in record time—often in weeks, not years.",
   "cap_title": "Built for Complexity. Designed for Impact.",
   "cap_subtitle": "We combine applied mathematics, AI, and advanced engineering to deliver tailored solutions that boost efficiency, reduce costs, and unlock growth.",
-  "impact_title": "Real impact, proven results",
-  "impact_subtitle": "Leading organizations trust us with their most ambitious challenges.",
+  "impact_title": "Engineered for Complexity. Designed for Impact.",
+  "impact_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver tailored solutions that enhance efficiency, reduce costs, and unlock growth.",
   "impact_diana": "+20.3% in sales with dynamic routing",
   "impact_copa": "-20% ground time by optimizing queues",
+  "success_cases_title": "Success Stories",
+  "math_to_results": "We Turn Math into Measurable Results",
+    "why_tulipan_title": "Why Tulipán",
+  "why_tulipan_subtitle": "Why Industry Leaders Work with Tulipán",
+  "why_tulipan_bullets": [
+    "Team of mathematicians, engineers, and developers",
+    "100% custom models — no generic tools",
+    "Proven track record across multiple industries",
+    "SaaS delivery with updates and support",
+    "We move fast and deliver results where others stop"
+  ],
+    "contact_us": "Contact Us",
+  "contact_us_title": "Ready to Revolutionize Your Operations?",
+
   "impact_falabella": "AI demand forecast to optimize inventory",
+
+  "how_we_work_title": "How We Work",
+
   "grid_title": "Trusted by leading data teams",
-   "cards": [
+  "cards": [
     {
       "title": "Optimization Models",
       "content": [

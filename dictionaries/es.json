@@ -20,12 +20,28 @@
   "team_advisors_title": "Nuestros Asesores",
   "team_advisors_description": "Contamos con un consejo asesor conformado por altos ejecutivos de múltiples industrias que han liderado transformaciones a gran escala, tomado decisiones críticas y vivido de primera mano los entornos empresariales más complejos. Su experiencia nos ayuda a enfocarnos en lo que realmente genera valor—y nos asegura que siempre trabajamos en lo que realmente genera impacto.",
 
-  "impact_title": "Impacto real, resultados comprobables",
-  "impact_subtitle": "Organizaciones líderes nos confían la solución de sus desafíos más ambiciosos.",
+  "impact_title": "Desarrollado para la Complejidad. Diseñado para el Impacto.",
+    "success_cases_title": "Casos de Éxito",
+      "math_to_results": "Convertimos Matemáticas en Resultados Medibles",
+
+
+  "impact_subtitle": "Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que mejoran la eficiencia, reducen costos y desbloquean crecimiento.",
   "impact_diana": "+20.3% en ventas con rutas dinámicas",
   "impact_copa": "-20% de tiempo en tierra optimizando colas",
   "impact_falabella": "Forecast de demanda con IA para optimizar inventario",
   "grid_title": "Confiado por equipos de datos líderes",
+  "why_tulipan_title": "Por Qué Tulipán",
+  "why_tulipan_subtitle": "Por Qué los Líderes de la Industria Trabajan con Tulipán",
+  "why_tulipan_bullets": [
+    "Equipo de matemáticos, ingenieros y desarrolladores",
+    "Modelos 100% personalizados — sin herramientas genéricas",
+    "Historial comprobado en múltiples industrias",
+    "Entrega SaaS con mejoras y soporte",
+    "Nos movemos rápido y damos resultados donde otros se detienen"
+  ],
+  "contact_us": "Contáctanos",
+  "contact_us_title": "¿Listo para Revolucionar Tus Operaciones?",
+  "how_we_work_title": "Cómo Trabajamos",
    "cards": [
     {
       "title": "Modelos de Optimización",
