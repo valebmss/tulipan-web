@@ -48,19 +48,20 @@ export default function Header({ dict }: HeaderProps) {
         {/* Logo + Language (Mobile Only) */}
         <div className="flex items-center gap-4">
           <Link href={`/${currentLang}`} className="flex items-center">
-            <img src="/logos/Tulipann.png" alt="Tulipán" className="w-12 w-auto" />
+            <img src="/logos/Tulipann.png" alt="Tulipán" className=" h-12 w-auto" />
           </Link>
           {/* Language switcher visible SOLO en móviles */}
           <div className="md:hidden ml-10">{LanguageSwitcher}</div>
         </div>
 
         {/* Botón hamburguesa en móviles */}
-        <button
-          className="md:hidden text-white h-10"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
+<button
+  className="md:hidden text-white text-2xl h-12 w-12 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-200"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Abrir menú"
+>
+  ☰
+</button>
 
         {/* Menú + Language switcher en escritorio */}
         <div className="hidden md:flex items-center space-x-6 text-sm text-gray-300">
