@@ -6,6 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import HeroCards from "./CardsImage";
+import OurTeam from "./ourteam";
 
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
@@ -86,7 +87,7 @@ export default function HomeClient({ dict }: { dict: any }) {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
+              className="text-cyan-400 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
             >
               {dict.about_title}
             </motion.h2>
@@ -113,13 +114,41 @@ export default function HomeClient({ dict }: { dict: any }) {
               {dict.about_p2}
             </motion.p>
           </motion.div>
+          <OurTeam dict={dict} />
         </div>
       </section>
       <section
         id="capacidad"
-        className="relative z-10 py-32  bg-neutral-900 text-white w-full"
+        className="relative z-10   bg-neutral-900 text-white w-full"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">
+                      <div className="text-center mb-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight "
+            >
+              {dict.nav_quehacemos}
+            </motion.h2>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-2xl mt-18 text-gray-200 max-w-2xl mx-auto"
+            >
+              {dict.impact_title}
+            </motion.h3>
+                        <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg  mt-8 sm:text-xl text-gray-300 max-w-4xl mx-auto"
+            >
+              {dict.impact_subtitle}
+            </motion.p>
+                    </div>
+
           <HeroCards dict={dict} />
         </div>
 
@@ -142,11 +171,19 @@ export default function HomeClient({ dict }: { dict: any }) {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white"
+              className=" text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight"
             >
-              {dict.impact_title}
+              {dict.nav_quehacemos}
             </motion.h2>
             <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg text-gray-400 max-w-2xl mx-auto"
+            >
+              {dict.impact_title}
+            </motion.p>
+                        <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}

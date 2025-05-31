@@ -30,12 +30,7 @@ export default function HeroCards({ dict }: Props) {
 
   return (
     <Box sx={{ width: "100%", px: { xs: 2, sm: 4 }, py: 8, bgcolor: "transparent" }}>
-      <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          {dict.impact_title}
-        </h2>
-      </div>
-
+      
       <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }} spacing={2}>
         {dict.cards.map((card, i) => (
           <motion.div
