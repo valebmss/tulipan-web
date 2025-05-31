@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-
+import HeroCards from "./CardsImage";
 
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 export default function HomeClient({ dict }: { dict: any }) {
-    const scrollContainerRef = useRef<HTMLDivElement>(null);
-
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -19,8 +18,6 @@ export default function HomeClient({ dict }: { dict: any }) {
       scrollContainerRef.current.scrollBy({ left: amount, behavior: "smooth" });
     }
   };
-
-
 
   const logos = Array.from({ length: 34 }, (_, i) => ({
     src: `/logos/logo-${i + 1}.png`,
@@ -33,12 +30,12 @@ export default function HomeClient({ dict }: { dict: any }) {
 
   const centerIndex = 14;
 
- return (
+  return (
     <main className="relative min-h-screen w-full items-center justify-center pt-32 md:pt-24 overflow-hidden ">
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
       <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
         <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-           {dict.hero_title} <br />
+          {dict.hero_title} <br />
           <span className="text-cyan-400">{dict.hero_math}</span>.
         </h1>
         <motion.p
@@ -48,7 +45,7 @@ export default function HomeClient({ dict }: { dict: any }) {
           viewport={{ once: true }}
           className="text-lg md:text-xl text-gray-300 mb-10"
         >
-{dict.hero_subtitle}
+          {dict.hero_subtitle}
         </motion.p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -70,13 +67,6 @@ export default function HomeClient({ dict }: { dict: any }) {
         id="sobrenosotros"
         className="relative z-10 py-28  bg-neutral-900 text-white w-full overflow-hidden"
       >
-
-        {/* Fondo decorativo suave */}
-        <div className="absolute inset-0 z-0 opacity-10 blur-3xl">
-          <div className="w-[35rem] h-[35rem] bg-cyan-500/30 rounded-full absolute -top-10 -left-20 mix-blend-lighten animate-pulse" />
-          <div className="w-[30rem] h-[30rem] bg-purple-500/30 rounded-full absolute top-40 -right-10 mix-blend-lighten animate-pulse" />
-        </div>
-
         <div className="relative max-w-6xl mx-auto text-center z-10">
           <motion.div
             initial="hidden"
@@ -129,7 +119,13 @@ export default function HomeClient({ dict }: { dict: any }) {
         id="capacidad"
         className="relative z-10 py-32  bg-neutral-900 text-white w-full"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          <HeroCards dict={dict} />
+        </div>
+
+        {/* Sección 3: Casos de éxito / Impacto *
+ <div className="max-w-7xl mx-auto">
+
           <div className="text-center mb-20">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -162,7 +158,7 @@ export default function HomeClient({ dict }: { dict: any }) {
               className="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth px-4 md:px-10 hide-scroll-bar"
               style={{ scrollbarWidth: "none" }}
             >
-              {cards.map((item :any, i:number) => (
+              {cards.map((item: any, i: number) => (
                 <motion.div
                   key={i}
                   layout
@@ -200,8 +196,7 @@ export default function HomeClient({ dict }: { dict: any }) {
             >
               <FaChevronRight size={22} />
             </button>
-          </div>
-        </div>
+          </div>*/}
       </section>
       {/* Sección 3: Casos de éxito / Impacto */}
       <section
@@ -249,8 +244,7 @@ export default function HomeClient({ dict }: { dict: any }) {
               },
               {
                 cliente: "Falabella",
-                resultado:
-                  dict.impact_falabella,
+                resultado: dict.impact_falabella,
                 logo: "/logos/falabella.svg",
               },
             ].map((caso, i) => (
@@ -285,45 +279,46 @@ export default function HomeClient({ dict }: { dict: any }) {
           </div>
         </div>
       </section>
- <section className="bg-[#0f0f0f] py-24 px-6 md:px-10 w-full">
-      <div className="max-w-7xl mx-auto grid grid-cols-6 gap-[1px] bg-white/5">
-        {logos.map((logo, i) => {
-          if (i === centerIndex) {
+      <section className="bg-[#0f0f0f] py-24 px-6 md:px-10 w-full">
+        <div className="max-w-7xl mx-auto grid grid-cols-6 gap-[1px] bg-white/5">
+          {logos.map((logo, i) => {
+            if (i === centerIndex) {
+              return (
+                <div
+                  key="center-text"
+                  className="col-span-3 row-span-3 flex items-center justify-center bg-[#0f0f0f] px-6 py-12"
+                >
+                  <motion.h2
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center text-2xl md:text-4xl font-bold text-cyan-400 leading-snug"
+                  >
+                    Trusted by
+                    <br />
+                    leading data
+                    <br />
+                    teams
+                  </motion.h2>
+                </div>
+              );
+            }
+
             return (
               <div
-                key="center-text"
-                className="col-span-3 row-span-3 flex items-center justify-center bg-[#0f0f0f] px-6 py-12"
+                key={i}
+                className="h-20 flex items-center justify-center bg-[#111] px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
               >
-                <motion.h2
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-center text-2xl md:text-4xl font-bold text-cyan-400 leading-snug"
-                >
-                  Trusted by<br />
-                  leading data<br />
-                  teams
-                </motion.h2>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-6 w-auto opacity-80"
+                />
               </div>
             );
-          }
-
-          return (
-            <div
-              key={i}
-              className="h-20 flex items-center justify-center bg-[#111] px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
-            >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-    className="max-h-6 w-auto opacity-80"
-              />
-            </div>
-          );
-        })}
-      </div>
-    </section>
-
+          })}
+        </div>
+      </section>
     </main>
   );
 }

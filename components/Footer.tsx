@@ -17,15 +17,33 @@ export default function Footer({ dict }: FooterProps) {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         <div>
           <p className="font-semibold text-white">{dict.footer_empresa}</p>
-          <p className="mt-2">© {new Date().getFullYear()} {dict.footer_derechos}</p>
+          <p className="mt-2">
+            © {new Date().getFullYear()} {dict.footer_derechos}
+          </p>
         </div>
         <div className="space-y-1">
-          <p><a href="#" className="hover:text-white">{dict.footer_inicio}</a></p>
-          <p><a href="#casos" className="hover:text-white">{dict.footer_casos}</a></p>
-          <p><a href="#contacto" className="hover:text-white">{dict.footer_contacto}</a></p>
+          <p>
+            <a href="#" className="hover:text-white">
+              {dict.footer_inicio}
+            </a>
+          </p>
+          <p>
+            <a href="#casos" className="hover:text-white">
+              {dict.footer_casos}
+            </a>
+          </p>
+          <p>
+            <a href="#contacto" className="hover:text-white">
+              {dict.footer_contacto}
+            </a>
+          </p>
         </div>
         <div className="space-y-1">
-          <p><a href="mailto:hello@tulipan.ai" className="hover:text-white">{dict.footer_correo}</a></p>
+          <p>
+            <a href="mailto:hello@tulipan.ai" className="hover:text-white">
+              {dict.footer_correo}
+            </a>
+          </p>
         </div>
       </div>
     </footer>
