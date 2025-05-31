@@ -1,0 +1,92 @@
+{
+      "nav_quehacemos": "Qué hacemos",
+  "nav_casos": "Casos",
+  "nav_equipo": "Equipo",
+  "nav_contacto": "Contacto",
+  "hero_title": "IA y Optimización que Impulsan los Negocios.",
+"hero_math" : "con matemáticas",
+
+  "hero_subtitle": "Desde aerolíneas hasta bienes de consumo, Tulipán ayuda a las empresas a desbloquear eficiencia y crecimiento mediante herramientas personalizadas de optimización, pronóstico e inteligencia artificial.",
+  "cta_1": "Trabajemos juntos",
+  "cta_2": "Ver nuestro trabajo",
+  "btn_change_language": "Cambiar idioma",
+  "about_title": "Quiénes Somos",
+  "about_p1": "Tulipán es un laboratorio de matemáticas aplicadas e inteligencia artificial. Diseñamos modelos a medida y herramientas digitales que aumentan los ingresos, reducen costos y desbloquean nuevas oportunidades en diversas industrias.",
+  "about_p2": "Nuestro equipo de doctores, ingenieros y desarrolladores trabaja mano a mano con los clientes para desplegar soluciones poderosas en tiempo récord, a menudo en semanas y no años.",
+  "cap_title": "Hecho para la Complejidad. Diseñado para el Impacto.",
+  "cap_subtitle": "Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que generan eficiencia, reducen costos y desbloquean crecimiento.",
+  "impact_title": "Impacto real, resultados comprobables",
+  "impact_subtitle": "Organizaciones líderes nos confían la solución de sus desafíos más ambiciosos.",
+  "impact_diana": "+20.3% en ventas con rutas dinámicas",
+  "impact_copa": "-20% de tiempo en tierra optimizando colas",
+  "impact_falabella": "Forecast de demanda con IA para optimizar inventario",
+  "grid_title": "Confiado por equipos de datos líderes",
+   "cards": [
+    {
+      "title": "Modelos de Optimización",
+      "content": [
+        "Resolvemos problemas reales con técnicas de optimización.",
+        "Asignación de Aviones – Copa Airlines...",
+        "Tamaño de Lote – Grupo Diana...",
+        "Optimización de Distribución – Huevos Kikes..."
+      ]
+    },
+    {
+      "title": "Pronóstico y Planificación",
+      "content": [
+        "Modelos de series de tiempo personalizados.",
+        "Pronóstico de Ventas – Grupo Corona...",
+        "Planificación de Inventarios – Cadenas Retail..."
+      ]
+    },
+    {
+      "title": "Personalización y Recomendaciones",
+      "content": [
+        "IA que impulsa la lealtad y conocimiento del cliente.",
+        "Promociones Inteligentes – Grupo Diana...",
+        "Sistemas de Recomendación...",
+        "Análisis de Lealtad – OfficeMax..."
+      ]
+    },
+    {
+      "title": "IA Aplicada como SaaS",
+      "content": [
+        "Despliegues serverless en AWS con mejora continua."
+      ]
+    }
+  ],
+
+  "fases": [
+    {
+      "title": "Descubrimiento",
+      "description": "Nos sumergimos en tu operación para detectar oportunidades."
+    },
+    {
+      "title": "MVP en Semanas",
+      "description": "Prototipo funcional rápidamente, mostrando ROI."
+    },
+    {
+      "title": "Despliegue",
+      "description": "Desde piloto hasta implementación completa."
+    },
+    {
+      "title": "Modelo SaaS",
+      "description": "Sin inversión inicial. Pago mensual."
+    }
+  ],
+
+  "razones": [
+    "Equipo de matemáticos, ingenieros y desarrolladores",
+    "Modelos 100% personalizados — nada prefabricado",
+    "Historial probado en diversas industrias",
+    "La propiedad intelectual permanece con nosotros",
+    "Nos movemos rápido y nos encantan los retos complejos"
+  ],
+
+  "footer_empresa": "Tulipán 1637",
+  "footer_derechos": "Todos los derechos reservados.",
+  "footer_inicio": "Inicio",
+  "footer_casos": "Casos",
+  "footer_contacto": "Contacto",
+  "footer_correo": "hello@tulipan.ai"
+}

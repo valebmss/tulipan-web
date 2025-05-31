@@ -1,0 +1,91 @@
+{
+   "nav_quehacemos": "What we do",
+  "nav_casos": "Cases",
+  "nav_equipo": "Team",
+  "nav_contacto": "Contact",
+    "hero_title": "AI and Optimization that Power Businesses.",
+  "hero_math" : "with mathematics",
+  "hero_subtitle": "From airlines to consumer goods, Tulipán helps companies unlock efficiency and growth through custom optimization, forecasting, and artificial intelligence tools.",
+  "cta_1": "Let's work together",
+  "cta_2": "See our work",
+  "btn_change_language": "Change language",
+  "about_title": "About Us",
+  "about_p1": "Tulipán is an applied mathematics and AI lab. We design custom models and digital tools that increase revenue, reduce costs, and unlock new opportunities across various industries.",
+  "about_p2": "Our team of PhDs, engineers, and developers works closely with clients to deploy powerful solutions in record time—often in weeks, not years.",
+  "cap_title": "Built for Complexity. Designed for Impact.",
+  "cap_subtitle": "We combine applied mathematics, AI, and advanced engineering to deliver tailored solutions that boost efficiency, reduce costs, and unlock growth.",
+  "impact_title": "Real impact, proven results",
+  "impact_subtitle": "Leading organizations trust us with their most ambitious challenges.",
+  "impact_diana": "+20.3% in sales with dynamic routing",
+  "impact_copa": "-20% ground time by optimizing queues",
+  "impact_falabella": "AI demand forecast to optimize inventory",
+  "grid_title": "Trusted by leading data teams",
+   "cards": [
+    {
+      "title": "Optimization Models",
+      "content": [
+        "We solve real-world problems using cutting-edge optimization techniques.",
+        "Aircraft Assignment – Copa Airlines: We assign planes minimizing changes, delays, and maintenance impact.",
+        "Batch Sizing – Grupo Diana: Reduces production costs and maximizes efficiency.",
+        "Distribution Optimization – Huevos Kikes: Route design reduces logistics costs by over 20%."
+      ]
+    },
+    {
+      "title": "Forecasting and Demand Planning",
+      "content": [
+        "Custom time series models that predict short, medium, and long-term trends.",
+        "Sales Forecasting – Grupo Corona: Includes macroeconomic variables like GDP and exchange rate.",
+        "Inventory Planning – Retail Chains: Predicts consumption and automates replenishment."
+      ]
+    },
+    {
+      "title": "Personalization and Recommendations",
+      "content": [
+        "AI that boosts loyalty, increases average ticket, and enhances customer insight.",
+        "Smart Promotions – Grupo Diana: Personalized offers based on customer behavior.",
+        "Recommendation Systems: Suggests unpurchased products using graphs and AI.",
+        "Loyalty Analysis – OfficeMax: Behavioral clustering to improve retention."
+      ]
+    },
+    {
+      "title": "AI as a Service (SaaS)",
+      "content": [
+        "All our models are deployed serverless in AWS, with continuous improvement and support. You focus on growth—we handle the math."
+      ]
+    }
+  ],
+
+  "fases": [
+    {
+      "title": "Discovery",
+      "description": "We dive into your operation to detect high-impact opportunities."
+    },
+    {
+      "title": "MVP in Weeks",
+      "description": "We rapidly build a functional prototype showing real ROI."
+    },
+    {
+      "title": "Deployment and Scaling",
+      "description": "From pilot to full rollout with continuous support."
+    },
+    {
+      "title": "SaaS Model",
+      "description": "No upfront investment. Monthly payment or shared gains model."
+    }
+  ],
+
+  "razones": [
+    "Team of mathematicians, engineers, and developers",
+    "100% custom models — nothing prefab",
+    "Proven track record across multiple industries",
+    "We retain IP — SaaS with continuous improvement and support",
+    "We move fast and love complex challenges"
+  ],
+
+  "footer_empresa": "Tulipán 1637",
+  "footer_derechos": "All rights reserved.",
+  "footer_inicio": "Home",
+  "footer_casos": "Cases",
+  "footer_contacto": "Contact",
+  "footer_correo": "hello@tulipan.ai"
+}

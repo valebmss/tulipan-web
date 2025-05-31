@@ -1,5 +1,7 @@
 "use client";
-import { useTranslation } from 'next-i18next';
+
+import { getDictionary } from '@/lib/dictionary';
+
 
 export const dynamic = "force-dynamic";
 
@@ -10,11 +12,13 @@ import dynamicImport from "next/dynamic";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import Switcher from "@/components/switcher";
 const ParticlesBg = dynamicImport(() => import("particles-bg"), { ssr: false });
 
-export default function Home() {
+export default async function Home({ params }: { params: { lang: 'es' | 'en' } }){
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const dict = await getDictionary(params.lang);
+
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -28,73 +32,11 @@ export default function Home() {
     alt: `Logo ${i + 1}`,
   }));
 
-  const cards = [
-    {
-      title: "Modelos de Optimización",
-      content: [
-        "Resolvemos problemas reales con técnicas de optimización de última generación.",
-        "Asignación de Aviones – Copa Airlines (Aviación): Asignamos aeronaves minimizando cambios, retrasos e impacto en mantenimiento.",
-        "Tamaño de Lote – Grupo Diana (CPG / Manufactura): Minimiza costos de producción y maximiza eficiencia.",
-        "Optimización de Distribución – Huevos Kikes (Logística): Diseño de rutas que reduce costos logísticos en más del 20%.",
-      ],
-    },
-    {
-      title: "Pronóstico y Planificación de la Demanda",
-      content: [
-        "Modelos personalizados de series de tiempo que predicen tendencias a corto, mediano y largo plazo.",
-        "Pronóstico de Ventas – Grupo Corona (Retail): Incluye variables macroeconómicas como PIB y tipo de cambio.",
-        "Planificación de Inventarios – Cadenas Retail: Predice consumo y automatiza el abastecimiento.",
-      ],
-    },
-    {
-      title: "Personalización y Recomendaciones",
-      content: [
-        "IA que impulsa la lealtad, incrementa el ticket promedio y profundiza el conocimiento del cliente.",
-        "Promociones Inteligentes – Grupo Diana: Ofertas personalizadas según el comportamiento del cliente.",
-        "Sistemas de Recomendación: Sugiere productos no comprados mediante grafos e IA.",
-        "Análisis de Lealtad – OfficeMax: Clustering conductual para mejorar retención.",
-      ],
-    },
-    {
-      title: "IA Aplicada como SaaS",
-      content: [
-        "Todos nuestros modelos se despliegan sin servidores en AWS, con mejora continua y soporte. Tú te enfocas en crecer—nosotros nos encargamos de las matemáticas.",
-      ],
-    },
-  ];
+const cards = dict.cards;
+const fases = dict.fases;
+const razones = dict.razones;
 
-  const fases = [
-    {
-      title: "Descubrimiento",
-      description:
-        "Nos sumergimos en tu operación para detectar oportunidades de alto impacto.",
-    },
-    {
-      title: "MVP en Semanas",
-      description:
-        "Construimos un prototipo funcional rápidamente, mostrando ROI real.",
-    },
-    {
-      title: "Despliegue y Escalamiento",
-      description:
-        "Desde piloto hasta implementación completa, con soporte continuo.",
-    },
-    {
-      title: "Modelo SaaS",
-      description:
-        "Sin inversiones iniciales. Pago mensual o modelo de shared gains. Todos los despliegues son serverless y cloud-native por defecto.",
-    },
-  ];
-
-  const razones = [
-    "Equipo de matemáticos, ingenieros y desarrolladores",
-    "Modelos 100% personalizados — nada prefabricado",
-    "Historial probado en diversas industrias",
-    "La propiedad intelectual permanece con nosotros — SaaS con mejoras y soporte",
-    "Nos movemos rápido y nos encantan los retos complejos",
-  ];
   const centerIndex = 14; // donde se insertará el bloque de texto
-    const { t, i18n } = useTranslation('common');
 
 
   return (
@@ -102,8 +44,8 @@ export default function Home() {
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
       <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
         <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-           {t('hero_title')} <br />
-          <span className="text-cyan-400">con matemáticas</span>.
+           {dict.hero_title} <br />
+          <span className="text-cyan-400">{dict.hero_math}</span>.
         </h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -112,9 +54,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-lg md:text-xl text-gray-300 mb-10"
         >
-          Desde aerolíneas hasta bienes de consumo, Tulipán ayuda a las empresas
-          a desbloquear eficiencia y crecimiento mediante herramientas
-          personalizadas de optimización, pronóstico e inteligencia artificial.
+{dict.hero_subtitle}
         </motion.p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -122,13 +62,13 @@ export default function Home() {
             href="#contacto"
             className="px-6 py-3 bg-cyan-500 text-black rounded-full font-semibold transition-all duration-300 hover:bg-cyan-400 hover:scale-105 shadow-md hover:shadow-cyan-400/40"
           >
-            Trabajemos juntos
+            {dict.cta_1}
           </Link>
           <Link
             href="#contacto"
             className="px-6 py-3 border border-cyan-500 text-cyan-400 rounded-full font-semibold transition-all duration-300  hover:scale-105 shadow-md hover:shadow-cyan-400/40"
           >
-            Ver nuestro trabajo
+            {dict.cta_2}
           </Link>
         </div>
       </section>
@@ -136,9 +76,7 @@ export default function Home() {
         id="sobrenosotros"
         className="relative z-10 py-28  bg-neutral-900 text-white w-full overflow-hidden"
       >
-              <button onClick={() => i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es')}>
-        Cambiar idioma
-      </button>
+
         {/* Fondo decorativo suave */}
         <div className="absolute inset-0 z-0 opacity-10 blur-3xl">
           <div className="w-[35rem] h-[35rem] bg-cyan-500/30 rounded-full absolute -top-10 -left-20 mix-blend-lighten animate-pulse" />
@@ -166,7 +104,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
             >
-              Quiénes Somos
+              {dict.about_title}
             </motion.h2>
 
             <motion.p
@@ -177,10 +115,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              Tulipán es un laboratorio de matemáticas aplicadas e inteligencia
-              artificial. Diseñamos modelos a medida y herramientas digitales
-              que aumentan los ingresos, reducen costos y desbloquean nuevas
-              oportunidades en diversas industrias.
+              {dict.about_p1}
             </motion.p>
 
             <motion.p
@@ -191,9 +126,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              Nuestro equipo de doctores, ingenieros y desarrolladores trabaja
-              mano a mano con los clientes para desplegar soluciones poderosas
-              en tiempo récord, a menudo en semanas y no años.
+              {dict.about_p2}
             </motion.p>
           </motion.div>
         </div>
@@ -211,7 +144,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight"
             >
-              Hecho para la Complejidad. Diseñado para el Impacto.
+              {dict.cap_title}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -220,9 +153,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-xl text-gray-300 max-w-4xl mx-auto"
             >
-              Combinamos matemáticas aplicadas, inteligencia artificial e
-              ingeniería avanzada para entregar soluciones personalizadas que
-              generan eficiencia, reducen costos y desbloquean crecimiento.
+              {dict.cap_subtitle}
             </motion.p>
           </div>
           <div className="relative flex items-center justify-center">
@@ -297,7 +228,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-white"
             >
-              Impacto real, resultados comprobables
+              {dict.impact_title}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -305,8 +236,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg text-gray-400 max-w-2xl mx-auto"
             >
-              Organizaciones líderes nos confían la solución de sus desafíos más
-              ambiciosos.
+              {dict.impact_subtitle}
             </motion.p>
           </div>
 
@@ -315,18 +245,18 @@ export default function Home() {
             {[
               {
                 cliente: "Grupo Diana",
-                resultado: "+20.3% en ventas con rutas dinámicas",
+                resultado: dict.impact_diana,
                 logo: "/logos/logo-diana.png",
               },
               {
                 cliente: "Copa Airlines",
-                resultado: "-20% de tiempo en tierra optimizando colas",
+                resultado: dict.impact_copa,
                 logo: "/logos/copa-airlines-logo.png",
               },
               {
                 cliente: "Falabella",
                 resultado:
-                  "Forecast de demanda con IA para optimizar inventario",
+                  dict.impact_falabella,
                 logo: "/logos/falabella.svg",
               },
             ].map((caso, i) => (
@@ -399,6 +329,8 @@ export default function Home() {
         })}
       </div>
     </section>
+              <Switcher />
+
     </main>
   );
 }
