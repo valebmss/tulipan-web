@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.14.0",
     "@heroui/react": "^2.7.8",
     "@mui/lab": "^7.0.0-beta.12",
+    "@mui/material": "^7.1.0",
     "framer-motion": "^12.12.1",
     "i18next": "^25.2.1",
     "next": "15.3.2",
