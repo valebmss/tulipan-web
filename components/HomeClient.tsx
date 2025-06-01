@@ -34,7 +34,7 @@ export default function HomeClient({ dict }: { dict: any }) {
 
   return (
     <div>
-    <main className="relative min-h-screen w-full items-center justify-center pt-32 md:pt-24 overflow-hidden ">
+    <main className="relative min-h-screen w-full items-center justify-center pt-32 md:pt-24 overflow-hidden">
       <ParticlesBg type="cobweb" bg={true} color="#06b6d4" />
       <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
         <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
@@ -91,7 +91,7 @@ export default function HomeClient({ dict }: { dict: any }) {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.8 }}
-              className="text-cyan-400 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight"
+              className="text-cyan-400 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight pt-12 "
             >
               {dict.about_title}
             </motion.h2>
