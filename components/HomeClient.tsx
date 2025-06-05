@@ -190,7 +190,7 @@ export default function HomeClient({ dict }: { dict: any }) {
         </div>
         {/* Sección 6 */}
 
-        <section className="bg-[#0f0f0f] py-24 px-6 md:px-10 w-full">
+        <section className=" py-24 px-6 md:px-10 w-full">
           <div className="max-w-7xl mx-auto grid grid-cols-6 gap-[1px] bg-white/5">
             {logos.map((logo, i) => {
               if (i === centerIndex) {
