@@ -1,107 +1,105 @@
 {
-  "nav_quehacemos": "What we do",
-  "nav_casos": "Cases",
+  "nav_quehacemos": "What We Do",
+  "nav_quienes": "About Us",
+  "nav_como": "How We Work",
+  "nav_casos": "Success Stories",
+  "nav_porque": "Why Tulipan 1637",
   "nav_equipo": "Team",
   "nav_contacto": "Contact",
-  "hero_title": "AI and Optimization that Power Businesses.",
-  "hero_math": "with mathematics",
-  "hero_subtitle": "From airlines to consumer goods, Tulipán helps companies unlock efficiency and growth through custom optimization, forecasting, and artificial intelligence tools.",
+  "hero_title": "AI and Optimization That Drive Business.",
+  "hero_math": "with math",
+  "casos_tittle": "From Data to Deployment in Just Weeks",
+  "hero_subtitle": "From airlines to consumer goods, Tulipán helps businesses unlock efficiency and growth through custom optimization, forecasting, and AI tools.",
   "cta_1": "Let's work together",
   "cta_2": "See our work",
   "btn_change_language": "Change language",
-  "team_title": "Meet the Team",
-  "team_advisors_title": "Our Advisors",
-  "team_advisors_description": "We have an advisory board made up of senior executives from multiple industries who have led large-scale transformations, made critical decisions, and experienced firsthand the most complex business environments. Their experience helps us focus on what truly creates value—and ensures we always work on what truly drives impact.",
   "about_title": "About Us",
-  "about_p1": "Tulipán is an applied mathematics and AI lab. We design custom models and digital tools that increase revenue, reduce costs, and unlock new opportunities across various industries.",
-  "about_p2": "Our team of PhDs, engineers, and developers works closely with clients to deploy powerful solutions in record time—often in weeks, not years.",
+  "about_p1": "Tulipán is a lab of applied mathematics and artificial intelligence. We design custom models and digital tools that boost revenue, reduce costs, and unlock new opportunities across industries.",
+  "about_p2": "Our team of PhDs, engineers, and developers works hand-in-hand with clients to deploy powerful solutions in record time—often in weeks, not years.",
   "cap_title": "Built for Complexity. Designed for Impact.",
-  "cap_subtitle": "We combine applied mathematics, AI, and advanced engineering to deliver tailored solutions that boost efficiency, reduce costs, and unlock growth.",
-  "impact_title": "Engineered for Complexity. Designed for Impact.",
-  "impact_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver tailored solutions that enhance efficiency, reduce costs, and unlock growth.",
+  "cap_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver custom solutions that generate efficiency, reduce costs, and unlock growth.",
+  "team_title": "Meet Our Team",
+  "team_advisors_title": "Our Advisors",
+  "team_advisors_description": "We have an advisory board made up of senior executives from various industries who have led large-scale transformations, made critical decisions, and experienced the most complex business environments firsthand. Their experience helps us focus on what truly generates value—and ensures we always work on what truly drives impact.",
+  "impact_title": "Built for Complexity. Designed for Impact.",
+  "success_cases_title": "Success Stories",
+  "math_to_results": "We Turn Math Into Measurable Results",
+  "impact_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver custom solutions that improve efficiency, reduce costs, and unlock growth.",
   "impact_diana": "+20.3% in sales with dynamic routing",
   "impact_copa": "-20% ground time by optimizing queues",
-  "success_cases_title": "Success Stories",
-  "math_to_results": "We Turn Math into Measurable Results",
-    "why_tulipan_title": "Why Tulipán",
+  "impact_falabella": "Demand forecasting with AI to optimize inventory",
+  "grid_title": "Trusted by Leading Data Teams",
+  "why_tulipan_title": "Why Tulipán",
   "why_tulipan_subtitle": "Why Industry Leaders Work with Tulipán",
   "why_tulipan_bullets": [
     "Team of mathematicians, engineers, and developers",
     "100% custom models — no generic tools",
-    "Proven track record across multiple industries",
+    "Proven track record across industries",
     "SaaS delivery with updates and support",
-    "We move fast and deliver results where others stop"
+    "We move fast and deliver where others stop"
   ],
-    "contact_us": "Contact Us",
+  "contact_us": "Contact Us",
   "contact_us_title": "Ready to Revolutionize Your Operations?",
-
-  "impact_falabella": "AI demand forecast to optimize inventory",
-
   "how_we_work_title": "How We Work",
-
-  "grid_title": "Trusted by leading data teams",
   "cards": [
     {
       "title": "Optimization Models",
       "content": [
-        "We solve real-world problems using cutting-edge optimization techniques.",
-        "Aircraft Assignment – Copa Airlines: We assign planes minimizing changes, delays, and maintenance impact.",
-        "Batch Sizing – Grupo Diana: Reduces production costs and maximizes efficiency.",
-        "Distribution Optimization – Huevos Kikes: Route design reduces logistics costs by over 20%."
+        "We solve real-world problems using optimization techniques.",
+        "Aircraft Assignment – Copa Airlines...",
+        "Batch Sizing – Grupo Diana...",
+        "Distribution Optimization – Huevos Kikes..."
       ]
     },
     {
-      "title": "Forecasting and Demand Planning",
+      "title": "Forecasting and Planning",
       "content": [
-        "Custom time series models that predict short, medium, and long-term trends.",
-        "Sales Forecasting – Grupo Corona: Includes macroeconomic variables like GDP and exchange rate.",
-        "Inventory Planning – Retail Chains: Predicts consumption and automates replenishment."
+        "Custom time series forecasting models.",
+        "Sales Forecasting – Grupo Corona...",
+        "Inventory Planning – Retail Chains..."
       ]
     },
     {
       "title": "Personalization and Recommendations",
       "content": [
-        "AI that boosts loyalty, increases average ticket, and enhances customer insight.",
-        "Smart Promotions – Grupo Diana: Personalized offers based on customer behavior.",
-        "Recommendation Systems: Suggests unpurchased products using graphs and AI.",
-        "Loyalty Analysis – OfficeMax: Behavioral clustering to improve retention."
+        "AI that drives customer loyalty and insight.",
+        "Smart Promotions – Grupo Diana...",
+        "Recommendation Systems...",
+        "Loyalty Analysis – OfficeMax..."
       ]
     },
     {
-      "title": "AI as a Service (SaaS)",
+      "title": "AI Delivered as SaaS",
       "content": [
-        "All our models are deployed serverless in AWS, with continuous improvement and support. You focus on growth—we handle the math."
+        "Serverless deployments on AWS with continuous improvement."
       ]
     }
   ],
-
   "fases": [
     {
       "title": "Discovery",
-      "description": "We dive into your operation to detect high-impact opportunities."
+      "description": "We dive into your operations to detect opportunities."
     },
     {
       "title": "MVP in Weeks",
-      "description": "We rapidly build a functional prototype showing real ROI."
+      "description": "Functional prototype delivered quickly, showing ROI."
     },
     {
-      "title": "Deployment and Scaling",
-      "description": "From pilot to full rollout with continuous support."
+      "title": "Deployment",
+      "description": "From pilot to full implementation."
     },
     {
       "title": "SaaS Model",
-      "description": "No upfront investment. Monthly payment or shared gains model."
+      "description": "No upfront investment. Monthly payment."
     }
   ],
-
   "razones": [
     "Team of mathematicians, engineers, and developers",
     "100% custom models — nothing prefab",
-    "Proven track record across multiple industries",
-    "We retain IP — SaaS with continuous improvement and support",
+    "Proven track record across industries",
+    "Intellectual property remains with us",
     "We move fast and love complex challenges"
   ],
-
   "footer_empresa": "Tulipán 1637",
   "footer_derechos": "All rights reserved.",
   "footer_inicio": "Home",

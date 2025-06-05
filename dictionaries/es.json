@@ -1,10 +1,14 @@
 {
-      "nav_quehacemos": "Qué hacemos",
-  "nav_casos": "Casos",
+  "nav_quehacemos": "Qué hacemos",
+  "nav_quienes": "Sobre Nosotros",
+  "nav_como": "Cómo Trabajamos",
+  "nav_casos": "Casos de Éxito",
+  "nav_porque": "Por qué Tulipan 1637",
   "nav_equipo": "Equipo",
   "nav_contacto": "Contacto",
   "hero_title": "IA y Optimización que Impulsan los Negocios.",
 "hero_math" : "con matemáticas",
+"casos_tittle": "De los Datos al Despliegue en Cuestión de Semanas",
 
   "hero_subtitle": "Desde aerolíneas hasta bienes de consumo, Tulipán ayuda a las empresas a desbloquear eficiencia y crecimiento mediante herramientas personalizadas de optimización, pronóstico e inteligencia artificial.",
   "cta_1": "Trabajemos juntos",
