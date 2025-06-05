@@ -11,7 +11,7 @@ const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 export default function HomeClient({ dict }: { dict: any }) {
   const logos = Array.from({ length: 34 }, (_, i) => ({
-    src: `/logos/logo-${i + 1}.png`,
+    src: `/logos/logo${i + 1}.png`,
     alt: `Logo ${i + 1}`,
   }));
 
@@ -223,7 +223,7 @@ export default function HomeClient({ dict }: { dict: any }) {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="max-h-6 w-auto opacity-80"
+                    className="max-h-8 w-auto opacity-80"
                   />
                 </div>
               );
