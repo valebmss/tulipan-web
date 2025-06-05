@@ -190,46 +190,45 @@ export default function HomeClient({ dict }: { dict: any }) {
         </div>
         {/* Sección 6 */}
 
-        <section className=" py-24 px-6 md:px-10 w-full">
-          <div className="max-w-7xl mx-auto grid grid-cols-6 gap-[1px] bg-white/5">
-            {logos.map((logo, i) => {
-              if (i === centerIndex) {
-                return (
-                  <div
-                    key="center-text"
-                    className="col-span-3 row-span-3 flex items-center justify-center bg-[#0f0f0f] px-6 py-12"
-                  >
-                    <motion.h2
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6 }}
-                      className="text-center text-2xl md:text-4xl font-bold text-cyan-400 leading-snug"
-                    >
-                      Trusted by
-                      <br />
-                      leading data
-                      <br />
-                      teams
-                    </motion.h2>
-                  </div>
-                );
-              }
-
-              return (
-                <div
-                  key={i}
-                  className="h-20 flex items-center justify-center bg-[#111] px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="max-h-8 w-auto opacity-80"
-                  />
-                </div>
-              );
-            })}
+<section className="py-16 px-4 sm:px-6 md:px-10 w-full">
+  <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[1px] bg-white/5">
+    {logos.map((logo, i) => {
+      if (i === centerIndex) {
+        return (
+          <div
+            key="center-text"
+            className="col-span-2 sm:col-span-3 lg:col-span-3 row-span-2 flex items-center justify-center bg-[#0f0f0f] px-4 py-10"
+          >
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-cyan-400 leading-snug"
+            >
+              Trusted by<br />
+              leading data<br />
+              teams
+            </motion.h2>
           </div>
-        </section>
+        );
+      }
+
+      return (
+        <div
+          key={i}
+          className="h-20 sm:h-24 flex items-center justify-center bg-[#111] px-3 sm:px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+        >
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            className="max-h-10 sm:max-h-12 md:max-h-14 w-auto opacity-80"
+          />
+        </div>
+      );
+    })}
+  </div>
+</section>
+
       </section>
       <section
         id="contacto"
