@@ -130,5 +130,34 @@
         "First-mile distribution model reducing logistics costs by 23%"
       ]
     }
+  ],
+  "how_we_do_it_title": "How We Do It",
+  "how_we_do_it_steps": [
+    {
+      "number": "01",
+      "title": "Analyze",
+      "description": "Identify Opportunities"
+    },
+    {
+      "number": "02",
+      "title": "Design",
+      "description": "Define & Create Optimal Solutions"
+    },
+    {
+      "number": "03",
+      "title": "Test",
+      "description": "Adjust, Test & Improve Solutions"
+    },
+    {
+      "number": "04",
+      "title": "Implement",
+      "description": "Scale & Deploy Solutions"
+    },
+    {
+      "number": "05",
+      "title": "Enjoy",
+      "description": "Make Optimal Decisions"
+    }
   ]
+
 }

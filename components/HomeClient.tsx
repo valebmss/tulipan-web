@@ -7,6 +7,7 @@ import HeroCards from "./CardsImage";
 import OurTeam from "./ourteam";
 import Asesores from "./asesores";
 import CasosDeExitoCarousel from "./CasoDeExito";
+import HowWeDoIt from "./HowWeDoIt";
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 export default function HomeClient({ dict }: { dict: any }) {
@@ -152,6 +153,7 @@ export default function HomeClient({ dict }: { dict: any }) {
             </motion.h2>
           </div>
         </div>
+        <HowWeDoIt dict={dict} />
       </section>
       {/* Sección 4: Casos de éxito / Impacto */}
 

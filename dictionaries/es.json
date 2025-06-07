@@ -138,6 +138,34 @@
         "Modelo de distribución de primera milla que reduce costos logísticos en 23%"
       ]
     }
+  ],
+   "how_we_do_it_title": "Cómo lo hacemos",
+  "how_we_do_it_steps": [
+    {
+      "number": "01",
+      "title": "Analizar",
+      "description": "Identificar oportunidades"
+    },
+    {
+      "number": "02",
+      "title": "Diseñar",
+      "description": "Definir y crear soluciones óptimas"
+    },
+    {
+      "number": "03",
+      "title": "Probar",
+      "description": "Ajustar, probar y mejorar soluciones"
+    },
+    {
+      "number": "04",
+      "title": "Implementar",
+      "description": "Escalar y desplegar soluciones"
+    },
+    {
+      "number": "05",
+      "title": "Disfrutar",
+      "description": "Tomar decisiones óptimas"
+    }
   ]
 
 }
