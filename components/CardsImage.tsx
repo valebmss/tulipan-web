@@ -21,7 +21,6 @@ const imagePaths = [
   "/cards/1.png",
   "/cards/2.png",
   "/cards/3.png",
-  "/cards/4.png",
 ];
 
 export default function HeroCards({ dict }: Props) {
@@ -29,9 +28,11 @@ export default function HeroCards({ dict }: Props) {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
+    
     <Box sx={{ width: "100%", px: { xs: 2, sm: 4 }, py: 8, bgcolor: "transparent" }}>
       
-      <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }} spacing={2}>
+      
+      <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 3 }} spacing={2}>
         {dict.cards.map((card, i) => (
           <motion.div
             key={i}

@@ -72,12 +72,6 @@
         "Sistemas de Recomendación...",
         "Análisis de Lealtad – OfficeMax..."
       ]
-    },
-    {
-      "title": "IA Aplicada como SaaS",
-      "content": [
-        "Despliegues serverless en AWS con mejora continua."
-      ]
     }
   ],
 
@@ -166,6 +160,9 @@
       "title": "Disfrutar",
       "description": "Tomar decisiones óptimas"
     }
-  ]
+  ],
+  "saas": "IA Aplicada como SaaS",
+  "saas_description": "Todos nuestros modelos se despliegan sin servidores en AWS, con mejora continua y soporte",
+  "saas_benefits": "Tú te enfocas en crecer — nosotros nos encargamos de las matemáticas."
 
 }

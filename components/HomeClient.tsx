@@ -131,6 +131,21 @@ export default function HomeClient({ dict }: { dict: any }) {
             >
               {dict.impact_subtitle}
             </motion.p>
+            <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="mb-16"
+>
+  <h3 className="text-cyan-300 text-xl md:text-2xl font-semibold mb-4 tracking-wide uppercase mt-12">
+    {dict.saas}
+  </h3>
+  <p className="text-gray-300 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+        {dict.saas_description} <br />  {dict.saas_benefits}
+
+  </p>
+</motion.div>
+
           </div>
 
           <HeroCards dict={dict} />

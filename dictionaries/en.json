@@ -67,12 +67,6 @@
         "Recommendation Systems...",
         "Loyalty Analysis – OfficeMax..."
       ]
-    },
-    {
-      "title": "AI Delivered as SaaS",
-      "content": [
-        "Serverless deployments on AWS with continuous improvement."
-      ]
     }
   ],
   "fases": [
@@ -158,6 +152,10 @@
       "title": "Enjoy",
       "description": "Make Optimal Decisions"
     }
-  ]
+  ],
+  "saas": "AI Applied as SaaS",
+"saas_description": "All our models run serverless on AWS, with continuous improvement and support",
+"saas_benefits": "You focus on growth — we take care of the math."
+
 
 }
