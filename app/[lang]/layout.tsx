@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import "../globals.css";
-import { getDictionary } from "@/lib/dictionary";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { getDictionary } from "../../lib/dictionary";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import type { Metadata } from "next";
 
 export default async function Layout({

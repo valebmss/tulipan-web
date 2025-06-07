@@ -1,5 +1,5 @@
-import { getDictionary } from "@/lib/dictionary";
-import HomeClient from "@/components/HomeClient";
+import { getDictionary } from "../../lib/dictionary";
+import HomeClient from "../../components/HomeClient";
 
 type PageProps = {
   params: Promise<{ lang: string | string[] | undefined }>;
