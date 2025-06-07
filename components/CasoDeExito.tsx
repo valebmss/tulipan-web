@@ -16,22 +16,19 @@ type Props = {
 
 export default function CasosDeExitoCarousel({ dict }: Props) {
   const [current, setCurrent] = useState(0);
-
   const successCases = dict.success_cases ?? [];
 
   if (!successCases.length) return null;
 
   const next = () => setCurrent((prev) => (prev + 1) % successCases.length);
-  const prev = () => setCurrent((prev) => (prev - 1 + successCases.length) % successCases.length);
-
+  const prev = () => setCurrent((curr) => (curr - 1 + successCases.length) % successCases.length);
   const caseData = successCases[current];
 
   return (
-    <section id="casos" className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden">
-      <div className="max-w-4xl mx-auto text-center px-6">
+    <section id="casos" className="relative z-10 py-20 md:py-28 bg-neutral-900 text-white w-full overflow-hidden">
+      <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 md:px-8">
 
-
-        <div className="relative bg-[#111] p-8 rounded-xl shadow-xl overflow-hidden">
+        <div className="relative bg-[#111] px-4 py-6 sm:px-8 sm:py-10 rounded-xl shadow-xl overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -40,16 +37,17 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-white">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-white">
                 {caseData.title}
               </h3>
-              <ul className="space-y-3 text-lg text-gray-200">
+
+              <ul className="space-y-3 text-base sm:text-lg text-gray-200 text-left sm:text-center px-1">
                 {caseData.points.map((p, idx) => (
                   <motion.li
                     key={idx}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * idx }}
+                    transition={{ delay: 0.05 * idx }}
                   >
                     • {p}
                   </motion.li>
@@ -62,6 +60,7 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
             <button
               onClick={prev}
               className="text-cyan-400 hover:text-cyan-200 transition-transform hover:scale-110"
+              aria-label="Anterior"
             >
               <FaChevronLeft size={24} />
             </button>
@@ -71,6 +70,7 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
             <button
               onClick={next}
               className="text-cyan-400 hover:text-cyan-200 transition-transform hover:scale-110"
+              aria-label="Siguiente"
             >
               <FaChevronRight size={24} />
             </button>
