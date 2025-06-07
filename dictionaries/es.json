@@ -50,27 +50,28 @@
     {
       "title": "Modelos de Optimización",
       "content": [
-        "Resolvemos problemas reales con técnicas de optimización.",
-        "Asignación de Aviones – Copa Airlines...",
-        "Tamaño de Lote – Grupo Diana...",
-        "Optimización de Distribución – Huevos Kikes..."
+        
+  "Resolvemos problemas reales utilizando técnicas de optimización de última generación.",
+    "- Asignación de Colas – (Aviación): Asignamos aeronaves y tripulación a vuelos minimizando cambios, retrasos e impacto en mantenimiento.",
+    "- Tamaño de Lote – (CPG / Manufactura): Minimiza costos de producción y maximiza eficiencia.",
+    "- Optimización de Distribución – (Logística): Diseño de rutas que reduce los costos logísticos en más del 20%."
       ]
     },
     {
       "title": "Pronóstico y Planificación",
       "content": [
-        "Modelos de series de tiempo personalizados.",
-        "Pronóstico de Ventas – Grupo Corona...",
-        "Planificación de Inventarios – Cadenas Retail..."
+       "Modelos personalizados de series de tiempo que predicen tendencias a corto, mediano y largo plazo.",
+        "• Pronóstico de Ventas – (Retail): Integra variables macroeconómicas como el PIB y el tipo de cambio. Podemos incluir tantas variables exógenas como estén disponibles y diseñar modelos individuales de series de tiempo por SKU para maximizar la precisión del pronóstico y su impacto.",
+        "• Planificación de Inventarios – Cadenas Retail: Predice el consumo y automatiza la reposición."
       ]
     },
     {
       "title": "Personalización y Recomendaciones",
       "content": [
-        "IA que impulsa la lealtad y conocimiento del cliente.",
-        "Promociones Inteligentes – Grupo Diana...",
-        "Sistemas de Recomendación...",
-        "Análisis de Lealtad – OfficeMax..."
+         "IA que impulsa la lealtad, incrementa el ticket promedio y profundiza el conocimiento del cliente.",
+        "• Promociones Inteligentes: Ofertas personalizadas basadas en el comportamiento del cliente.",
+        "• Sistemas de Recomendación: Sugiere productos aún no comprados usando teoría de grafos y aprendizaje automático.",
+        "• Análisis de Lealtad: Agrupamiento conductual para mejorar la retención."
       ]
     }
   ],

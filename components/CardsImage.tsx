@@ -34,64 +34,78 @@ export default function HeroCards({ dict }: Props) {
       
       <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 3 }} spacing={2}>
         {dict.cards.map((card, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{
-              scale: 1.03,
-              transition: { type: "spring", stiffness: 200 },
-            }}
-            transition={{ delay: i * 0.1 }}
-            viewport={{ once: true }}
-          >
-            <Paper
-              elevation={3}
-              sx={{
-                bgcolor: "#1a1a1a",
-                p: 3,
-                borderRadius: 2,
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                gap: 1,
-                mt: i % 2 === 0 ? 0 : 6,
-                pb: [1, 3].includes(i) ? 8 : 3,
-                transition: "all 0.3s ease-in-out",
-                "&:hover": {
-                  boxShadow: "0 10px 30px rgba(255, 255, 255, 0.1)",
-                  bgcolor: "#222",
-                },
-              }}
+
+<motion.div
+  key={i}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+>
+  <motion.div
+    whileHover={!isMobile ? { scale: 1.03 } : {}}
+    transition={{ type: "spring", stiffness: 200 }}
+  >
+    <Paper
+      elevation={3}
+      sx={{
+        bgcolor: "#1a1a1a",
+        p: 3,
+        borderRadius: 2,
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
+        gap: 1,
+        mt: i % 2 === 0 ? 0 : 6,
+        pb: [1, 3].includes(i) ? 8 : 3,
+        transition: "all 0.3s ease-in-out",
+        "&:hover": {
+          boxShadow: "0 10px 30px rgba(255, 255, 255, 0.1)",
+          bgcolor: "#222",
+        },
+      }}
+    >
+      <img
+        src={imagePaths[i]}
+        alt={card.title}
+        style={{
+          width: "100%",
+          height: isMobile ? "180px" : [1, 3].includes(i) ? "320px" : "200px",
+          objectFit: "cover",
+          borderRadius: "8px",
+          marginBottom: "16px",
+        }}
+      />
+
+      <h3 className="text-lg md:text-xl font-semibold text-white mb-2 mt-4">
+        {card.title}
+      </h3>
+
+      {/* Contenido animado según el hover de toda la card */}
+      <motion.div
+        className="flex flex-col gap-2 text-sm text-neutral-300 leading-relaxed"
+        animate={{ maxHeight: isMobile ? 1000 : 100 }}
+        whileHover={!isMobile ? { maxHeight: 1000 } : {}}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        style={{ overflow: "hidden" }}
+      >
+        {card.content.map((line, idx) => {
+          const isListItem = line.trim().startsWith("- ") || line.trim().startsWith("•");
+          return isListItem ? (
+            <li
+              key={idx}
+              className="ml-6 pl-2 relative text-cyan-300 before:absolute before:left-0 before:text-cyan-400 before:text-base mt-4"
             >
-              <img
-                src={imagePaths[i]}
-                alt={card.title}
-                style={{
-                  width: "100%",
-                  height: isMobile ? "180px" : [1, 3].includes(i) ? "320px" : "200px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                  marginBottom: "16px",
-                }}
-              />
+              {line.replace(/^- |^• /, "")}
+            </li>
+          ) : (
+            <p key={idx} className="text-neutral-400">{line}</p>
+          );
+        })}
+      </motion.div>
+    </Paper>
+  </motion.div>
+</motion.div>
 
-              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 mt-4">
-                {card.title}
-              </h3>
-
-              <motion.div
-                className="flex flex-col gap-2 text-sm text-neutral-400 leading-relaxed"
-                initial={{ maxHeight: 100, overflow: "hidden" }}
-                whileHover={{ maxHeight: 1000 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-              >
-                {card.content.map((line, idx) => (
-                  <p key={idx}>{line}</p>
-                ))}
-              </motion.div>
-            </Paper>
-          </motion.div>
         ))}
       </Masonry>
     </Box>

@@ -45,27 +45,27 @@
     {
       "title": "Optimization Models",
       "content": [
-        "We solve real-world problems using optimization techniques.",
-        "Aircraft Assignment – Copa Airlines...",
-        "Batch Sizing – Grupo Diana...",
-        "Distribution Optimization – Huevos Kikes..."
+   "We solve real-world problems using cutting-edge optimization techniques.",
+    "- Queue Assignment – (Aviation): We assign aircraft and crew to flights minimizing changes, delays, and maintenance impact.",
+    "- Batch Sizing – (CPG / Manufacturing): Minimizes production costs and maximizes efficiency.",
+    "- Distribution Optimization – (Logistics): Route design that reduces logistics costs by over 20%."
       ]
     },
     {
       "title": "Forecasting and Planning",
       "content": [
-        "Custom time series forecasting models.",
-        "Sales Forecasting – Grupo Corona...",
-        "Inventory Planning – Retail Chains..."
+        "Custom time series models that predict short, medium, and long-term trends.",
+        "• Sales Forecasting – (Retail): Integrates macroeconomic variables like GDP and exchange rate. We can include as many exogenous variables as are available and design individual SKU-level time series models to maximize forecast accuracy and impact.",
+        "• Inventory Planning – Retail Chains: Predicts consumption and automates replenishment."
       ]
     },
     {
       "title": "Personalization and Recommendations",
       "content": [
-        "AI that drives customer loyalty and insight.",
-        "Smart Promotions – Grupo Diana...",
-        "Recommendation Systems...",
-        "Loyalty Analysis – OfficeMax..."
+         "AI that drives loyalty, increases average ticket size, and deepens customer understanding.",
+        "• Smart Promotions: Personalized offers based on customer behavior.",
+        "• Recommendation Systems: Suggests unpurchased products using graph theory and machine learning.",
+        "• Loyalty Analysis: Behavioral clustering to improve retention."
       ]
     }
   ],
