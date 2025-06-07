@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type Props = {
@@ -23,6 +23,12 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
   const next = () => setCurrent((prev) => (prev + 1) % successCases.length);
   const prev = () => setCurrent((curr) => (curr - 1 + successCases.length) % successCases.length);
   const caseData = successCases[current];
+
+  // ⏱️ Autoplay
+  useEffect(() => {
+    const interval = setInterval(next, 5000); // cambia cada 5 segundos
+    return () => clearInterval(interval); // limpiar intervalo al desmontar
+  }, [successCases.length]);
 
   return (
     <section id="casos" className="relative z-10 py-20 md:py-28 bg-neutral-900 text-white w-full overflow-hidden">
