@@ -1,7 +1,7 @@
 const execPath = process.env.npm_execpath || "";
 
 if (execPath.includes("npm") && !execPath.includes("yarn")) {
-  console.error('\n🚫 ERROR: Este proyecto usa Yarn. ¡NO uses `npm install`!\n');
+ // console.error('\n🚫 ERROR: Este proyecto usa Yarn. ¡NO uses `npm install`!\n');
 
   // Borra el package-lock.json si lo generaron
   const fs = require('fs');
