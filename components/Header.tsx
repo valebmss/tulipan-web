@@ -72,7 +72,7 @@ export default function Header({ dict }: HeaderProps) {
 
         {/* Menú + Language switcher en escritorio */}
         <div className="hidden md:flex items-center space-x-6 text-sm text-gray-300">
-          <Link href="sobrenosotros" className="hover:text-white">
+          <Link href="#sobrenosotros" className="hover:text-white">
             {dict.nav_quienes}
           </Link>
           <Link href="#capacidad" className="hover:text-white">
