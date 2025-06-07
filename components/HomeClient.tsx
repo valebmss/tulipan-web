@@ -6,7 +6,7 @@ import Link from "next/link";
 import HeroCards from "./CardsImage";
 import OurTeam from "./ourteam";
 import Asesores from "./asesores";
-
+import CasosDeExitoCarousel from "./CasoDeExito";
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 export default function HomeClient({ dict }: { dict: any }) {
@@ -171,6 +171,7 @@ export default function HomeClient({ dict }: { dict: any }) {
             </motion.h2>
           </div>
         </div>
+        <CasosDeExitoCarousel dict={dict} />
       </section>
       <section
         id="porque_tulipan"

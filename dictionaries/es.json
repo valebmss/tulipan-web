@@ -113,5 +113,31 @@
   "footer_inicio": "Inicio",
   "footer_casos": "Casos",
   "footer_contacto": "Contacto",
-  "footer_correo": "hello@tulipan.ai"
+  "footer_correo": "hello@tulipan.ai",
+  "success_cases": [
+    {
+      "title": "Aerolínea líder global",
+      "points": [
+        "20% menos tiempo en tierra → ahorro equivalente a 3 aviones",
+        "Modelo de asignación de colas que reduce interrupciones operativas",
+        "Actualmente optimizando una expansión de flota de 50 aeronaves"
+      ]
+    },
+    {
+      "title": "Empresa de Consumo Masivo líder en LatAm",
+      "points": [
+        "App con rutas dinámicas, promociones y recomendaciones",
+        "Aumento del 20.3% en ventas en equipos que usan nuestro sistema",
+        "Visión artificial para inventarios e integración con KYC"
+      ]
+    },
+    {
+      "title": "Líder del Sector Agrícola en LatAm",
+      "points": [
+        "+80 millones de huevos/año sin aumentar capacidad",
+        "Modelo de distribución de primera milla que reduce costos logísticos en 23%"
+      ]
+    }
+  ]
+
 }

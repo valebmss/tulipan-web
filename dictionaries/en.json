@@ -105,5 +105,30 @@
   "footer_inicio": "Home",
   "footer_casos": "Cases",
   "footer_contacto": "Contact",
-  "footer_correo": "hello@tulipan.ai"
+  "footer_correo": "hello@tulipan.ai",
+   "success_cases": [
+    {
+      "title": "Global Leading Airline",
+      "points": [
+        "20% less ground time → savings equivalent to 3 aircraft",
+        "Queue assignment model that reduces operational disruptions",
+        "Currently optimizing a fleet expansion of 50 aircraft"
+      ]
+    },
+    {
+      "title": "Mass Consumption Leader in LatAm",
+      "points": [
+        "App with dynamic routes, promotions, and recommendations",
+        "20.3% sales increase in teams using our system",
+        "Computer vision for inventory and KYC integration"
+      ]
+    },
+    {
+      "title": "Agricultural Sector Leader in LatAm",
+      "points": [
+        "80+ million eggs/year without increasing capacity",
+        "First-mile distribution model reducing logistics costs by 23%"
+      ]
+    }
+  ]
 }
