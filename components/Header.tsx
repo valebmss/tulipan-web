@@ -46,7 +46,7 @@ export default function Header({ dict }: HeaderProps) {
   );
 
   return (
-    <header className="fixed top-0 left-0 w-full px-6 md:px-10 py-4 bg-black/70 backdrop-blur-sm z-50 border-b border-white/10">
+<header className="fixed top-0 left-0 w-full px-6 md:px-10 py-4 bg-[#0f0f15]/90 backdrop-blur-sm z-50 border-b border-white/10">
       <div className="flex justify-between items-center w-full">
         {/* Logo + Language (Mobile Only) */}
         <div className="flex items-center gap-4">

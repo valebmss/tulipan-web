@@ -53,10 +53,15 @@ export default function HomeClient({ dict }: { dict: any }) {
           </div>
         </section>
       </main>
+<div className="relative bg-[#14141C] overflow-hidden">
+  {/* Capa de textura con transparencia */}
+  <div
+    className="absolute inset-0 bg-[url('/textura/fondo.png')] bg-repeat bg-top opacity-10 pointer-events-none"
+    aria-hidden="true"
+  />
 
       <section
         id="sobrenosotros"
-        className="relative z-10 py-28  bg-neutral-900 text-white w-full overflow-hidden"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">
           <motion.div
@@ -110,7 +115,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       </section>
       <section
         id="capacidad"
-        className="relative z-10   bg-neutral-900 text-white w-full"
+        className="relative z-10    text-white w-full"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">
           <div className="text-center mb-8">
@@ -154,7 +159,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       {/* Sección 5: Proceso */}
       <section
         id="proceso"
-        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+        className="relative z-10 py-28 text-white w-full overflow-hidden"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">
           <div className="text-center mb-8">
@@ -174,7 +179,7 @@ export default function HomeClient({ dict }: { dict: any }) {
 
       <section
         id="casos"
-        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+        className="relative z-10 py-28 text-white w-full overflow-hidden"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">
           <div className="text-center mb-8">
@@ -192,7 +197,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       </section>
       <section
         id="porque_tulipan"
-        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+        className="relative z-10 py-28  text-white w-full overflow-hidden"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">
           <div className="text-center mb-8">
@@ -220,7 +225,7 @@ export default function HomeClient({ dict }: { dict: any }) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
-                className="text-center text-base sm:text-xl md:text-2xl font-bold text-cyan-400 leading-snug"
+                className="text-center text-base sm:text-xl md:text-2xl font-bold text-white leading-snug"
               >
                 Trusted by<br />
                 leading data<br />
@@ -258,7 +263,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       </section>
 <section
   id="contacto"
-  className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+  className="relative z-10 py-28  text-white w-full overflow-hidden"
 >
   <div className="relative max-w-4xl mx-auto text-center z-10 px-6">
     <motion.h2
@@ -315,6 +320,9 @@ export default function HomeClient({ dict }: { dict: any }) {
     </motion.div>
   </div>
 </section>
+
+
+    </div>
 
     </div>
   );

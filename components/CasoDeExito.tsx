@@ -31,7 +31,7 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
   }, [successCases.length]);
 
   return (
-    <section id="casos" className="relative z-10 py-20 md:py-28 bg-neutral-900 text-white w-full overflow-hidden">
+    <section id="casos" className="relative z-10 py-20 md:py-28  text-white w-full overflow-hidden">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 md:px-8">
 
         <div className="relative bg-[#111] px-4 py-6 sm:px-8 sm:py-10 rounded-xl shadow-xl overflow-hidden">

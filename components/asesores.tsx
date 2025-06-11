@@ -66,14 +66,17 @@ export default function Asesores({ dict }: Props) {
             key={i}
             className="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
           >
-            <div className="relative w-full h-64">
-              <Image
-                src={member.img}
-                alt={member.name}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
+<div className="flex justify-center mt-6">
+  <div className="w-32 h-32 relative rounded-full overflow-hidden border-2 border-cyan-400 shadow-md">
+    <Image
+      src={member.img}
+      alt={member.name}
+      fill
+      className="object-cover"
+    />
+  </div>
+</div>
+
             <div className="p-5 text-center">
               <h3 className="text-xl font-semibold">{member.name}</h3>
               <p className="text-sm text-gray-400">{member.role}</p>

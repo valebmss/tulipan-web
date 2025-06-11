@@ -21,7 +21,7 @@
     url("https://db.onlinewebfonts.com/t/110de0bbe7344f96136d5cedd6608f9d.svg#GT Cinetype Regular")format("svg");
 }
 :root {
-  --background: #0a0a0a;
+  --background: #0d0d16;
   --foreground: #ededed;
   --font-sans: 'GT Cinetype Regular', ui-sans-serif, system-ui;
   --font-titles: 'PP Formula Semi Extended Bold', ui-sans-serif, system-ui;
@@ -37,7 +37,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #14141C;
     --foreground: #ededed;
   }
 }
