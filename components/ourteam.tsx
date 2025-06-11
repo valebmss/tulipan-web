@@ -49,6 +49,14 @@ export default function OurTeam({ dict }: Props) {
             >
               {dict.team_title }
             </motion.h3>
+                         <motion.p
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.8, delay: 0.2 }}
+                          className="text-lg  mt-8 sm:text-xl text-gray-300 max-w-4xl mx-auto"
+                        >
+                          {dict.about_p2}
+                        </motion.p>
 
       </div>
 
