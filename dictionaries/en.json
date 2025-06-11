@@ -8,45 +8,44 @@
   "nav_contacto": "Contact",
   "btn_change_language": "Change language",
 
-  "hero_title": "AI and Optimization That Drive Business.",
-  "hero_math": "with math",
-  "hero_subtitle": "From airlines to consumer goods, Tulipán helps businesses unlock efficiency and growth through custom optimization, forecasting, and AI tools.",
+  "hero_title": "We turn operations into equations—and equations into AI-powered growth.",
+  "hero_subtitle": "From airlines to consumer goods, Tulipán translates business operations into mathematical language and builds custom optimization, forecasting, and AI-powered tools that drive efficiency and scale.",
   "cta_1": "Let's work together",
   "cta_2": "See our work",
 
   "about_title": "About Us",
-  "about_p1": "Tulipán is a lab of applied mathematics and artificial intelligence. We design custom models and digital tools that boost revenue, reduce costs, and unlock new opportunities across industries.",
+  "about_p1": "Tulipán is an applied mathematics and artificial intelligence lab. We work with leading companies to tackle their most complex business challenges. We design tailor-made models and digital tools that boost revenue, reduce costs, and unlock new opportunities across industries. Our team of PhDs, engineers, and developers work hand-in-hand with clients to deploy powerful solutions in record time — often in weeks, not years.",
   "about_p2": "Our team of PhDs, engineers, and developers works hand-in-hand with clients to deploy powerful solutions in record time—often in weeks, not years.",
 
   "cap_title": "Built for Complexity. Designed for Impact.",
-  "cap_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver custom solutions that generate efficiency, reduce costs, and unlock growth.",
+  "cap_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver customized solutions that drive efficiency, reduce costs, and unlock growth.",
 
   "how_we_work_title": "How We Work",
   "cards": [
     {
-      "title": "Optimization Models",
+      "title": "Robust Optimization",
       "content": [
-        "We solve real-world problems using cutting-edge optimization techniques.",
-        "- Queue Assignment – (Aviation): We assign aircraft and crew to flights minimizing changes, delays, and maintenance impact.",
-        "- Batch Sizing – (CPG / Manufacturing): Minimizes production costs and maximizes efficiency.",
-        "- Distribution Optimization – (Logistics): Route design that reduces logistics costs by over 20%."
+        "We solve real-world problems using state-of-the-art optimization techniques.",
+        "- Tail Assignment – (Aviation): Assign aircraft to flights while minimizing changes, delays, and maintenance impact.",
+        "- Lot Sizing – (CPG / Manufacturing): Minimize production costs and maximize efficiency.",
+        "- Distribution Optimization – (Logistics): Route design that cuts distribution costs by over 20%."
       ]
     },
     {
-      "title": "Forecasting and Planning",
+      "title": "Forecasting & Demand Planning",
       "content": [
-        "Custom time series models that predict short, medium, and long-term trends.",
-        "• Sales Forecasting – (Retail): Integrates macroeconomic variables like GDP and exchange rate. We can include as many exogenous variables as are available and design individual SKU-level time series models to maximize forecast accuracy and impact.",
-        "• Inventory Planning – Retail Chains: Predicts consumption and automates replenishment."
+        "Custom time-series models that predict short-, medium-, and long-term trends.",
+        "• Sales Forecasting – (Retail): Incorporates macroeconomic variables like GDP and exchange rates. We can include as many exogenous variables as are available and design individual time series models for each SKU to maximize forecasting accuracy and business impact.",
+        "• Inventory Planning – Retail Chains: Predicts consumption and automates restocking"
       ]
     },
     {
-      "title": "Personalization and Recommendations",
+      "title": "Personalization & Recommendations",
       "content": [
-        "AI that drives loyalty, increases average ticket size, and deepens customer understanding.",
-        "• Smart Promotions: Personalized offers based on customer behavior.",
-        "• Recommendation Systems: Suggests unpurchased products using graph theory and machine learning.",
-        "• Loyalty Analysis: Behavioral clustering to improve retention."
+        "AI that drives loyalty, increases average ticket size, and deepens customer insight.",
+        "• Smart Promotions: Personalized offers based on customer behavior",
+        "• Recommender Systems: Suggests products not yet bought using graph theory and ML.",
+        "• Loyalty Analytics: Behavioral clustering to improve retention."
       ]
     }
   ],
@@ -105,40 +104,40 @@
   "impact_falabella": "Demand forecasting with AI to optimize inventory",
 
   "success_cases_title": "Success Stories",
-  "math_to_results": "We Turn Math Into Measurable Results",
-  "casos_tittle": "From Data to Deployment in Just Weeks",
+  "math_to_results": "We Turn Math into Measurable Results",
+  "casos_tittle": "From Data to Deployment in Weeks",
   "success_cases": [
     {
-      "title": "Global Leading Airline",
+      "title": "Major Ariline",
       "points": [
         "20% less ground time → savings equivalent to 3 aircraft",
-        "Queue assignment model that reduces operational disruptions",
-        "Currently optimizing a fleet expansion of 50 aircraft"
+        "Tail assignment model reducing operational disruptions",
+        "Currently optimizing a 50-aircraft fleet expansion"
       ]
     },
     {
-      "title": "Mass Consumption Leader in LatAm",
+      "title": "Large CPG Player in LatAm",
       "points": [
         "App with dynamic routes, promotions, and recommendations",
         "20.3% sales increase in teams using our system",
-        "Computer vision for inventory and KYC integration"
+        "Inventory vision AI and KYC integration"
       ]
     },
     {
-      "title": "Agricultural Sector Leader in LatAm",
+      "title": "Large Agriculture Industry Leader in LatAm",
       "points": [
-        "80+ million eggs/year without increasing capacity",
-        "First-mile distribution model reducing logistics costs by 23%"
+        "+80 million eggs/year without expanding capacity",
+        "First-mile distribution model cutting logistics costs by 23%"
       ]
     }
   ],
 
-  "team_title": "Meet Our Team",
-  "team_advisors_title": "Our Advisors",
-  "team_advisors_description": "We have an advisory board made up of senior executives from various industries who have led large-scale transformations, made critical decisions, and experienced the most complex business environments firsthand. Their experience helps us focus on what truly generates value—and ensures we always work on what truly drives impact.",
+  "team_title": "Team",
+  "team_advisors_title": "Advisors",
+  "team_advisors_description": "Our advisory board includes top executives from multiple industries who’ve led through uncertainty, scaled operations, and solved high-stakes problems. Their experience helps us focus on what truly drives impact—and ensures we never lose sight of what really moves the business.",
 
   "why_tulipan_title": "Why Tulipán",
-  "why_tulipan_subtitle": "Why Industry Leaders Work with Tulipán",
+  "why_tulipan_subtitle": "Why Industry Leaders Work With Tulipán",
   "why_tulipan_bullets": [
     "Team of mathematicians, engineers, and developers",
     "100% custom models — no generic tools",
@@ -155,8 +154,8 @@
   ],
 
   "saas": "AI Applied as SaaS",
-  "saas_description": "All our models run serverless on AWS, with continuous improvement and support",
-  "saas_benefits": "You focus on growth — we take care of the math.",
+  "saas_description": "All models are deployed serverlessly on AWS with continuous improvement and support.",
+  "saas_benefits": "You focus on growth — we handle the math.",
 
   "contact_us": "Contact Us",
   "contact_us_title": "Ready to Revolutionize Your Operations?",
