@@ -9,9 +9,10 @@ import Asesores from "./asesores";
 import CasosDeExitoCarousel from "./CasoDeExito";
 import HowWeDoIt from "./HowWeDoIt";
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
+import React from "react";
 
 export default function HomeClient({ dict }: { dict: any }) {
-  const logos = Array.from({ length: 34 }, (_, i) => ({
+  const logos = Array.from({ length: 36 }, (_, i) => ({
     src: `/logos/logo${i + 1}.png`,
     alt: `Logo ${i + 1}`,
   }));
@@ -210,24 +211,30 @@ export default function HomeClient({ dict }: { dict: any }) {
 <section className="py-16 px-4 sm:px-6 md:px-10 w-full">
   <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[1px] bg-white/5">
     {logos.map((logo, i) => {
-      if (i === centerIndex) {
+      // Insertar el texto justo donde irían los logos 15-16-18-19
+      if (i === 14) {
         return (
-          <div
-            key="center-text"
-            className="col-span-2 sm:col-span-3 lg:col-span-3 row-span-2 flex items-center justify-center bg-[#0f0f0f] px-4 py-10"
-          >
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-cyan-400 leading-snug"
-            >
-              Trusted by<br />
-              leading data<br />
-              teams
-            </motion.h2>
-          </div>
+          <React.Fragment key="center-text">
+            <div className="col-span-2 row-span-2 flex items-center justify-center bg-[#0f0f0f] px-4 py-10">
+              <motion.h2
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                className="text-center text-base sm:text-xl md:text-2xl font-bold text-cyan-400 leading-snug"
+              >
+                Trusted by<br />
+                leading data<br />
+                teams
+              </motion.h2>
+            </div>
+            {/* Saltarse el espacio de los 3 logos que el texto reemplazó */}
+          </React.Fragment>
         );
+      }
+
+      // Saltarse los índices 15, 17 y 18 porque los reemplaza el bloque
+      if ([15, 17, 18].includes(i)) {
+        return null;
       }
 
       return (
@@ -246,32 +253,69 @@ export default function HomeClient({ dict }: { dict: any }) {
   </div>
 </section>
 
+
+
       </section>
-      <section
-        id="contacto"
-        className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
-      >
-        <div className="relative max-w-6xl mx-auto text-center z-10">
-          <div className="text-center mb-8">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight "
-            >
-              {dict.contact_us}
-            </motion.h2>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl mt-18 text-gray-200 max-w-2xl mx-auto"
-            >
-              {dict.contact_us_title}
-            </motion.h3>
-          </div>
-        </div>
-      </section>
+<section
+  id="contacto"
+  className="relative z-10 py-28 bg-neutral-900 text-white w-full overflow-hidden"
+>
+  <div className="relative max-w-4xl mx-auto text-center z-10 px-6">
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-cyan-400 text-3xl md:text-5xl font-bold mb-4 tracking-tight"
+    >
+      {dict.contact_us_title}
+    </motion.h2>
+
+    <motion.p
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="text-lg md:text-xl text-gray-300 mb-6"
+    >
+      {dict.contact_us_text}
+    </motion.p>
+
+    <motion.p
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.5 }}
+      className="text-lg font-semibold text-white mb-10"
+    >
+      📧 <a href="mailto:contact@tulipan1637.com" className="underline hover:text-cyan-400">contact@tulipan1637.com</a>
+    </motion.p>
+
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
+      className="flex flex-col md:flex-row gap-4 justify-center items-center"
+    >
+     <a
+  href="https://calendly.com/tulipan1637"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border border-gray-400 text-gray-100 hover:bg-white hover:text-black px-6 py-3 rounded-lg transition duration-300"
+>
+  {dict.contact_us_call}
+</a>
+
+<a
+  href="https://wa.me/573001112233"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border border-gray-400 text-gray-100 hover:bg-white hover:text-black px-6 py-3 rounded-lg transition duration-300"
+>
+  {dict.contact_us_whatsapp}
+</a>
+
+    </motion.div>
+  </div>
+</section>
+
     </div>
   );
 }
