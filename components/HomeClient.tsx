@@ -158,7 +158,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       </section>
       {/* Sección 5: Proceso */}
       <section
-        id="proceso"
+        id="procesos"
         className="relative z-10 py-28 text-white w-full overflow-hidden"
       >
         <div className="relative max-w-6xl mx-auto text-center z-10">

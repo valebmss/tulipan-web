@@ -78,7 +78,7 @@ export default function Header({ dict }: HeaderProps) {
           <Link href="#capacidad" className="hover:text-white">
             {dict.nav_quehacemos}
           </Link>
-          <Link href="#proceso" className="hover:text-white">
+          <Link href="#procesos" className="hover:text-white">
             {dict.nav_como}
           </Link>
           <Link href="#casos" className="hover:text-white">
