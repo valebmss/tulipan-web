@@ -47,22 +47,25 @@ export default function HeroCards({ dict }: Props) {
   >
     <Paper
       elevation={3}
-      sx={{
-        bgcolor: "#1a1a1a",
-        p: 3,
-        borderRadius: 2,
-        color: "white",
-        display: "flex",
-        flexDirection: "column",
-        gap: 1,
-        mt: i % 2 === 0 ? 0 : 6,
-        pb: [1, 3].includes(i) ? 8 : 3,
-        transition: "all 0.3s ease-in-out",
-        "&:hover": {
-          boxShadow: "0 10px 30px rgba(255, 255, 255, 0.1)",
-          bgcolor: "#222",
-        },
-      }}
+sx={{
+  bgcolor: "#1A1A23", // tono oscuro ligeramente más claro que el fondo
+  p: 3,
+  borderRadius: 2,
+  color: "white",
+  display: "flex",
+  flexDirection: "column",
+  gap: 1,
+  mt: i % 2 === 0 ? 0 : 6,
+  pb: [1, 3].includes(i) ? 8 : 3,
+  border: "1px solid rgba(255, 255, 255, 0.05)", // sutil borde
+  backdropFilter: "blur(2px)", // efecto glass muy suave
+  transition: "all 0.3s ease-in-out",
+  "&:hover": {
+    boxShadow: "0 10px 25px rgba(0, 0, 0, 0.4)",
+    bgcolor: "#20202c", // un poco más claro al hacer hover
+  },
+}}
+
     >
       <img
         src={imagePaths[i]}

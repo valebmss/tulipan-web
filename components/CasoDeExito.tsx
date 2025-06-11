@@ -21,7 +21,10 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
   if (!successCases.length) return null;
 
   const next = () => setCurrent((prev) => (prev + 1) % successCases.length);
-  const prev = () => setCurrent((curr) => (curr - 1 + successCases.length) % successCases.length);
+  const prev = () =>
+    setCurrent(
+      (curr) => (curr - 1 + successCases.length) % successCases.length
+    );
   const caseData = successCases[current];
 
   // ⏱️ Autoplay
@@ -31,10 +34,12 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
   }, [successCases.length]);
 
   return (
-    <section id="casos" className="relative z-10 py-20 md:py-28  text-white w-full overflow-hidden">
+    <section
+      id="casos"
+      className="relative z-10 py-20 md:py-28  text-white w-full overflow-hidden"
+    >
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 md:px-8">
-
-        <div className="relative bg-[#111] px-4 py-6 sm:px-8 sm:py-10 rounded-xl shadow-xl overflow-hidden">
+        <div className="relative px-6 py-8 sm:px-10 sm:py-12 rounded-2xl border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-md bg-[#1A1A23]/90 overflow-hidden transition-all duration-500">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -62,23 +67,23 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
             </motion.div>
           </AnimatePresence>
 
-          <div className="flex justify-between items-center mt-8">
+          <div className="flex justify-between items-center mt-10 px-4">
             <button
               onClick={prev}
-              className="text-cyan-400 hover:text-cyan-200 transition-transform hover:scale-110"
+              className="text-cyan-400 hover:text-white transition-all hover:scale-125 p-2 bg-white/5 rounded-full shadow-md"
               aria-label="Anterior"
             >
-              <FaChevronLeft size={24} />
+              <FaChevronLeft size={20} />
             </button>
-            <span className="text-gray-400 text-sm">
-              {current + 1}/{successCases.length}
+            <span className="text-gray-400 text-sm font-medium tracking-wide">
+              {current + 1} / {successCases.length}
             </span>
             <button
               onClick={next}
-              className="text-cyan-400 hover:text-cyan-200 transition-transform hover:scale-110"
+              className="text-cyan-400 hover:text-white transition-all hover:scale-125 p-2 bg-white/5 rounded-full shadow-md"
               aria-label="Siguiente"
             >
-              <FaChevronRight size={24} />
+              <FaChevronRight size={20} />
             </button>
           </div>
         </div>
