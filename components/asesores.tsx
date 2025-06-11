@@ -64,7 +64,7 @@ export default function Asesores({ dict }: Props) {
         {team.map((member, i) => (
           <div
             key={i}
-            className="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+            className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" style={{backgroundColor: "#1A1A23"}}
           >
 <div className="flex justify-center mt-6">
   <div className="w-32 h-32 relative rounded-full overflow-hidden border-2 border-cyan-400 shadow-md">
