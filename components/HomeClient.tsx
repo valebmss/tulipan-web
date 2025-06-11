@@ -98,16 +98,7 @@ export default function HomeClient({ dict }: { dict: any }) {
               {dict.about_p1}
             </motion.p>
 
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.8 }}
-              className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto"
-            >
-              {dict.about_p2}
-            </motion.p>
+
           </motion.div>
           <OurTeam dict={dict} />
           <Asesores dict={dict} />
