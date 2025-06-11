@@ -210,6 +210,22 @@ export default function HomeClient({ dict }: { dict: any }) {
               {dict.why_tulipan_subtitle}
             </motion.h2>
           </div>
+              <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 text-left text-white/90 text-base md:text-lg px-4 md:px-10 max-w-4xl mx-auto mb-12">
+      {dict.why_tulipan_bullets?.map(
+        (bullet: string, index: number) => (
+          <motion.li
+            key={index}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="flex items-start gap-3"
+          >
+            <span className="text-cyan-400 text-xl mt-1">•</span>
+            <span>{bullet}</span>
+          </motion.li>
+        )
+      )}
+    </ul>
         </div>
         {/* Sección 6 */}
 
