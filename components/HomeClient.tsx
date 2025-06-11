@@ -25,7 +25,6 @@ export default function HomeClient({ dict }: { dict: any }) {
         <section className="relative z-10 flex flex-col justify-center items-center text-center min-h-screen max-w-4xl mx-auto px-4">
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
             {dict.hero_title} <br />
-            <span className="text-cyan-400">{dict.hero_math}</span>.
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -6,49 +6,30 @@
   "nav_porque": "Why Tulipan 1637",
   "nav_equipo": "Team",
   "nav_contacto": "Contact",
+  "btn_change_language": "Change language",
+
   "hero_title": "AI and Optimization That Drive Business.",
   "hero_math": "with math",
-  "casos_tittle": "From Data to Deployment in Just Weeks",
   "hero_subtitle": "From airlines to consumer goods, Tulipán helps businesses unlock efficiency and growth through custom optimization, forecasting, and AI tools.",
   "cta_1": "Let's work together",
   "cta_2": "See our work",
-  "btn_change_language": "Change language",
+
   "about_title": "About Us",
   "about_p1": "Tulipán is a lab of applied mathematics and artificial intelligence. We design custom models and digital tools that boost revenue, reduce costs, and unlock new opportunities across industries.",
   "about_p2": "Our team of PhDs, engineers, and developers works hand-in-hand with clients to deploy powerful solutions in record time—often in weeks, not years.",
+
   "cap_title": "Built for Complexity. Designed for Impact.",
   "cap_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver custom solutions that generate efficiency, reduce costs, and unlock growth.",
-  "team_title": "Meet Our Team",
-  "team_advisors_title": "Our Advisors",
-  "team_advisors_description": "We have an advisory board made up of senior executives from various industries who have led large-scale transformations, made critical decisions, and experienced the most complex business environments firsthand. Their experience helps us focus on what truly generates value—and ensures we always work on what truly drives impact.",
-  "impact_title": "Built for Complexity. Designed for Impact.",
-  "success_cases_title": "Success Stories",
-  "math_to_results": "We Turn Math Into Measurable Results",
-  "impact_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver custom solutions that improve efficiency, reduce costs, and unlock growth.",
-  "impact_diana": "+20.3% in sales with dynamic routing",
-  "impact_copa": "-20% ground time by optimizing queues",
-  "impact_falabella": "Demand forecasting with AI to optimize inventory",
-  "grid_title": "Trusted by Leading Data Teams",
-  "why_tulipan_title": "Why Tulipán",
-  "why_tulipan_subtitle": "Why Industry Leaders Work with Tulipán",
-  "why_tulipan_bullets": [
-    "Team of mathematicians, engineers, and developers",
-    "100% custom models — no generic tools",
-    "Proven track record across industries",
-    "SaaS delivery with updates and support",
-    "We move fast and deliver where others stop"
-  ],
-  "contact_us": "Contact Us",
-  "contact_us_title": "Ready to Revolutionize Your Operations?",
+
   "how_we_work_title": "How We Work",
   "cards": [
     {
       "title": "Optimization Models",
       "content": [
-   "We solve real-world problems using cutting-edge optimization techniques.",
-    "- Queue Assignment – (Aviation): We assign aircraft and crew to flights minimizing changes, delays, and maintenance impact.",
-    "- Batch Sizing – (CPG / Manufacturing): Minimizes production costs and maximizes efficiency.",
-    "- Distribution Optimization – (Logistics): Route design that reduces logistics costs by over 20%."
+        "We solve real-world problems using cutting-edge optimization techniques.",
+        "- Queue Assignment – (Aviation): We assign aircraft and crew to flights minimizing changes, delays, and maintenance impact.",
+        "- Batch Sizing – (CPG / Manufacturing): Minimizes production costs and maximizes efficiency.",
+        "- Distribution Optimization – (Logistics): Route design that reduces logistics costs by over 20%."
       ]
     },
     {
@@ -62,7 +43,7 @@
     {
       "title": "Personalization and Recommendations",
       "content": [
-         "AI that drives loyalty, increases average ticket size, and deepens customer understanding.",
+        "AI that drives loyalty, increases average ticket size, and deepens customer understanding.",
         "• Smart Promotions: Personalized offers based on customer behavior.",
         "• Recommendation Systems: Suggests unpurchased products using graph theory and machine learning.",
         "• Loyalty Analysis: Behavioral clustering to improve retention."
@@ -87,44 +68,7 @@
       "description": "No upfront investment. Monthly payment."
     }
   ],
-  "razones": [
-    "Team of mathematicians, engineers, and developers",
-    "100% custom models — nothing prefab",
-    "Proven track record across industries",
-    "Intellectual property remains with us",
-    "We move fast and love complex challenges"
-  ],
-  "footer_empresa": "Tulipán 1637",
-  "footer_derechos": "All rights reserved.",
-  "footer_inicio": "Home",
-  "footer_casos": "Cases",
-  "footer_contacto": "Contact",
-  "footer_correo": "hello@tulipan.ai",
-   "success_cases": [
-    {
-      "title": "Global Leading Airline",
-      "points": [
-        "20% less ground time → savings equivalent to 3 aircraft",
-        "Queue assignment model that reduces operational disruptions",
-        "Currently optimizing a fleet expansion of 50 aircraft"
-      ]
-    },
-    {
-      "title": "Mass Consumption Leader in LatAm",
-      "points": [
-        "App with dynamic routes, promotions, and recommendations",
-        "20.3% sales increase in teams using our system",
-        "Computer vision for inventory and KYC integration"
-      ]
-    },
-    {
-      "title": "Agricultural Sector Leader in LatAm",
-      "points": [
-        "80+ million eggs/year without increasing capacity",
-        "First-mile distribution model reducing logistics costs by 23%"
-      ]
-    }
-  ],
+
   "how_we_do_it_title": "How We Do It",
   "how_we_do_it_steps": [
     {
@@ -153,9 +97,74 @@
       "description": "Make Optimal Decisions"
     }
   ],
+
+  "impact_title": "Built for Complexity. Designed for Impact.",
+  "impact_subtitle": "We combine applied mathematics, artificial intelligence, and advanced engineering to deliver custom solutions that improve efficiency, reduce costs, and unlock growth.",
+  "impact_diana": "+20.3% in sales with dynamic routing",
+  "impact_copa": "-20% ground time by optimizing queues",
+  "impact_falabella": "Demand forecasting with AI to optimize inventory",
+
+  "success_cases_title": "Success Stories",
+  "math_to_results": "We Turn Math Into Measurable Results",
+  "casos_tittle": "From Data to Deployment in Just Weeks",
+  "success_cases": [
+    {
+      "title": "Global Leading Airline",
+      "points": [
+        "20% less ground time → savings equivalent to 3 aircraft",
+        "Queue assignment model that reduces operational disruptions",
+        "Currently optimizing a fleet expansion of 50 aircraft"
+      ]
+    },
+    {
+      "title": "Mass Consumption Leader in LatAm",
+      "points": [
+        "App with dynamic routes, promotions, and recommendations",
+        "20.3% sales increase in teams using our system",
+        "Computer vision for inventory and KYC integration"
+      ]
+    },
+    {
+      "title": "Agricultural Sector Leader in LatAm",
+      "points": [
+        "80+ million eggs/year without increasing capacity",
+        "First-mile distribution model reducing logistics costs by 23%"
+      ]
+    }
+  ],
+
+  "team_title": "Meet Our Team",
+  "team_advisors_title": "Our Advisors",
+  "team_advisors_description": "We have an advisory board made up of senior executives from various industries who have led large-scale transformations, made critical decisions, and experienced the most complex business environments firsthand. Their experience helps us focus on what truly generates value—and ensures we always work on what truly drives impact.",
+
+  "why_tulipan_title": "Why Tulipán",
+  "why_tulipan_subtitle": "Why Industry Leaders Work with Tulipán",
+  "why_tulipan_bullets": [
+    "Team of mathematicians, engineers, and developers",
+    "100% custom models — no generic tools",
+    "Proven track record across industries",
+    "SaaS delivery with updates and support",
+    "We move fast and deliver where others stop"
+  ],
+  "razones": [
+    "Team of mathematicians, engineers, and developers",
+    "100% custom models — nothing prefab",
+    "Proven track record across industries",
+    "Intellectual property remains with us",
+    "We move fast and love complex challenges"
+  ],
+
   "saas": "AI Applied as SaaS",
-"saas_description": "All our models run serverless on AWS, with continuous improvement and support",
-"saas_benefits": "You focus on growth — we take care of the math."
+  "saas_description": "All our models run serverless on AWS, with continuous improvement and support",
+  "saas_benefits": "You focus on growth — we take care of the math.",
 
+  "contact_us": "Contact Us",
+  "contact_us_title": "Ready to Revolutionize Your Operations?",
 
+  "footer_empresa": "Tulipán 1637",
+  "footer_derechos": "All rights reserved.",
+  "footer_inicio": "Home",
+  "footer_casos": "Cases",
+  "footer_contacto": "Contact",
+  "footer_correo": "hello@tulipan.ai"
 }

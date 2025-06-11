@@ -93,7 +93,7 @@ export default function HeroCards({ dict }: Props) {
           return isListItem ? (
             <li
               key={idx}
-              className="ml-6 pl-2 relative text-cyan-300 before:absolute before:left-0 before:text-cyan-400 before:text-base mt-4"
+              className="text-left ml-6 pl-2 relative text-cyan-300 before:absolute before:left-0 before:text-cyan-400 before:text-base mt-4"
             >
               {line.replace(/^- |^• /, "")}
             </li>

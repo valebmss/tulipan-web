@@ -6,61 +6,35 @@
   "nav_porque": "Por qué Tulipan 1637",
   "nav_equipo": "Equipo",
   "nav_contacto": "Contacto",
-  "hero_title": "IA y Optimización que Impulsan los Negocios.",
-"hero_math" : "con matemáticas",
-"casos_tittle": "De los Datos al Despliegue en Cuestión de Semanas",
+  "btn_change_language": "Cambiar idioma",
 
-  "hero_subtitle": "Desde aerolíneas hasta bienes de consumo, Tulipán ayuda a las empresas a desbloquear eficiencia y crecimiento mediante herramientas personalizadas de optimización, pronóstico e inteligencia artificial.",
+  "hero_title": "Traducimos operaciones en ecuaciones, y ecuaciones en crecimiento con IA",
+  "hero_subtitle": "Desde aerolíneas hasta consumo masivo, Tulipán traduce operaciones empresariales al lenguaje matemático y construye herramientas personalizadas de optimización, pronóstico e inteligencia artificial que impulsan la eficiencia y la escalabilidad.",
   "cta_1": "Trabajemos juntos",
   "cta_2": "Ver nuestro trabajo",
-  "btn_change_language": "Cambiar idioma",
+
   "about_title": "Quiénes Somos",
-  "about_p1": "Tulipán es un laboratorio de matemáticas aplicadas e inteligencia artificial. Diseñamos modelos a medida y herramientas digitales que aumentan los ingresos, reducen costos y desbloquean nuevas oportunidades en diversas industrias.",
+  "about_p1": "Tulipán es un laboratorio de matemáticas aplicadas e inteligencia artificial. Trabajamos con compañías líderes para enfrentar sus desafíos más complejos. Diseñamos modelos a la medida y herramientas digitales que aumentan ingresos, reducen costos y desbloquean nuevas oportunidades en distintos sectores. Nuestro equipo de doctores en matemáticas, ingenieros y desarrolladores trabaja de la mano con nuestros clientes para desplegar soluciones potentes en tiempo récord — frecuentemente en semanas, no años.",
   "about_p2": "Nuestro equipo de doctores, ingenieros y desarrolladores trabaja mano a mano con los clientes para desplegar soluciones poderosas en tiempo récord, a menudo en semanas y no años.",
+
   "cap_title": "Hecho para la Complejidad. Diseñado para el Impacto.",
-  "cap_subtitle": "Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que generan eficiencia, reducen costos y desbloquean crecimiento.",
-  "team_title": "Conoce a Nuestro Equipo",
-  
-  "team_advisors_title": "Nuestros Asesores",
-  "team_advisors_description": "Contamos con un consejo asesor conformado por altos ejecutivos de múltiples industrias que han liderado transformaciones a gran escala, tomado decisiones críticas y vivido de primera mano los entornos empresariales más complejos. Su experiencia nos ayuda a enfocarnos en lo que realmente genera valor—y nos asegura que siempre trabajamos en lo que realmente genera impacto.",
+  "cap_subtitle": "Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que mejoran la eficiencia, reducen costos y desbloquean crecimiento.",
 
-  "impact_title": "Desarrollado para la Complejidad. Diseñado para el Impacto.",
-    "success_cases_title": "Casos de Éxito",
-      "math_to_results": "Convertimos Matemáticas en Resultados Medibles",
-
-
-  "impact_subtitle": "Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que mejoran la eficiencia, reducen costos y desbloquean crecimiento.",
-  "impact_diana": "+20.3% en ventas con rutas dinámicas",
-  "impact_copa": "-20% de tiempo en tierra optimizando colas",
-  "impact_falabella": "Forecast de demanda con IA para optimizar inventario",
-  "grid_title": "Confiado por equipos de datos líderes",
-  "why_tulipan_title": "Por Qué Tulipán",
-  "why_tulipan_subtitle": "Por Qué los Líderes de la Industria Trabajan con Tulipán",
-  "why_tulipan_bullets": [
-    "Equipo de matemáticos, ingenieros y desarrolladores",
-    "Modelos 100% personalizados — sin herramientas genéricas",
-    "Historial comprobado en múltiples industrias",
-    "Entrega SaaS con mejoras y soporte",
-    "Nos movemos rápido y damos resultados donde otros se detienen"
-  ],
-  "contact_us": "Contáctanos",
-  "contact_us_title": "¿Listo para Revolucionar Tus Operaciones?",
   "how_we_work_title": "Cómo Trabajamos",
-   "cards": [
+  "cards": [
     {
       "title": "Modelos de Optimización",
       "content": [
-        
-  "Resolvemos problemas reales utilizando técnicas de optimización de última generación.",
-    "- Asignación de Colas – (Aviación): Asignamos aeronaves y tripulación a vuelos minimizando cambios, retrasos e impacto en mantenimiento.",
-    "- Tamaño de Lote – (CPG / Manufactura): Minimiza costos de producción y maximiza eficiencia.",
-    "- Optimización de Distribución – (Logística): Diseño de rutas que reduce los costos logísticos en más del 20%."
+        "Resolvemos problemas reales utilizando técnicas de optimización de última generación.",
+        "- Asignación de Colas – (Aviación): Asignamos aeronaves y tripulación a vuelos minimizando cambios, retrasos e impacto en mantenimiento.",
+        "- Tamaño de Lote – (CPG / Manufactura): Minimiza costos de producción y maximiza eficiencia.",
+        "- Optimización de Distribución – (Logística): Diseño de rutas que reduce los costos logísticos en más del 20%."
       ]
     },
     {
       "title": "Pronóstico y Planificación",
       "content": [
-       "Modelos personalizados de series de tiempo que predicen tendencias a corto, mediano y largo plazo.",
+        "Modelos personalizados de series de tiempo que predicen tendencias a corto, mediano y largo plazo.",
         "• Pronóstico de Ventas – (Retail): Integra variables macroeconómicas como el PIB y el tipo de cambio. Podemos incluir tantas variables exógenas como estén disponibles y diseñar modelos individuales de series de tiempo por SKU para maximizar la precisión del pronóstico y su impacto.",
         "• Planificación de Inventarios – Cadenas Retail: Predice el consumo y automatiza la reposición."
       ]
@@ -68,14 +42,13 @@
     {
       "title": "Personalización y Recomendaciones",
       "content": [
-         "IA que impulsa la lealtad, incrementa el ticket promedio y profundiza el conocimiento del cliente.",
+        "IA que impulsa la lealtad, incrementa el ticket promedio y profundiza el conocimiento del cliente.",
         "• Promociones Inteligentes: Ofertas personalizadas basadas en el comportamiento del cliente.",
         "• Sistemas de Recomendación: Sugiere productos aún no comprados usando teoría de grafos y aprendizaje automático.",
         "• Análisis de Lealtad: Agrupamiento conductual para mejorar la retención."
       ]
     }
   ],
-
   "fases": [
     {
       "title": "Descubrimiento",
@@ -95,46 +68,7 @@
     }
   ],
 
-  "razones": [
-    "Equipo de matemáticos, ingenieros y desarrolladores",
-    "Modelos 100% personalizados — nada prefabricado",
-    "Historial probado en diversas industrias",
-    "La propiedad intelectual permanece con nosotros",
-    "Nos movemos rápido y nos encantan los retos complejos"
-  ],
-
-  "footer_empresa": "Tulipán 1637",
-  "footer_derechos": "Todos los derechos reservados.",
-  "footer_inicio": "Inicio",
-  "footer_casos": "Casos",
-  "footer_contacto": "Contacto",
-  "footer_correo": "hello@tulipan.ai",
-  "success_cases": [
-    {
-      "title": "Aerolínea líder global",
-      "points": [
-        "20% menos tiempo en tierra → ahorro equivalente a 3 aviones",
-        "Modelo de asignación de colas que reduce interrupciones operativas",
-        "Actualmente optimizando una expansión de flota de 50 aeronaves"
-      ]
-    },
-    {
-      "title": "Empresa de Consumo Masivo líder en LatAm",
-      "points": [
-        "App con rutas dinámicas, promociones y recomendaciones",
-        "Aumento del 20.3% en ventas en equipos que usan nuestro sistema",
-        "Visión artificial para inventarios e integración con KYC"
-      ]
-    },
-    {
-      "title": "Líder del Sector Agrícola en LatAm",
-      "points": [
-        "+80 millones de huevos/año sin aumentar capacidad",
-        "Modelo de distribución de primera milla que reduce costos logísticos en 23%"
-      ]
-    }
-  ],
-   "how_we_do_it_title": "Cómo lo hacemos",
+  "how_we_do_it_title": "Cómo lo hacemos",
   "how_we_do_it_steps": [
     {
       "number": "01",
@@ -162,8 +96,74 @@
       "description": "Tomar decisiones óptimas"
     }
   ],
+
+  "impact_title": "Desarrollado para la Complejidad. Diseñado para el Impacto.",
+  "impact_subtitle": "Combinamos matemáticas aplicadas, inteligencia artificial e ingeniería avanzada para entregar soluciones personalizadas que mejoran la eficiencia, reducen costos y desbloquean crecimiento.",
+  "impact_diana": "+20.3% en ventas con rutas dinámicas",
+  "impact_copa": "-20% de tiempo en tierra optimizando colas",
+  "impact_falabella": "Forecast de demanda con IA para optimizar inventario",
+
+  "success_cases_title": "Casos de Éxito",
+  "math_to_results": "Convertimos Matemáticas en Resultados Medibles",
+  "casos_tittle": "De los Datos al Despliegue en Cuestión de Semanas",
+  "success_cases": [
+    {
+      "title": "Aerolínea líder global",
+      "points": [
+        "20% menos tiempo en tierra → ahorro equivalente a 3 aviones",
+        "Modelo de asignación de colas que reduce interrupciones operativas",
+        "Actualmente optimizando una expansión de flota de 50 aeronaves"
+      ]
+    },
+    {
+      "title": "Empresa de Consumo Masivo líder en LatAm",
+      "points": [
+        "App con rutas dinámicas, promociones y recomendaciones",
+        "Aumento del 20.3% en ventas en equipos que usan nuestro sistema",
+        "Visión artificial para inventarios e integración con KYC"
+      ]
+    },
+    {
+      "title": "Líder del Sector Agrícola en LatAm",
+      "points": [
+        "+80 millones de huevos/año sin aumentar capacidad",
+        "Modelo de distribución de primera milla que reduce costos logísticos en 23%"
+      ]
+    }
+  ],
+
+  "team_title": "Conoce a Nuestro Equipo",
+  "team_advisors_title": "Nuestros Asesores",
+  "team_advisors_description": "Contamos con un consejo asesor conformado por altos ejecutivos de múltiples industrias que han liderado transformaciones a gran escala, tomado decisiones críticas y vivido de primera mano los entornos empresariales más complejos. Su experiencia nos ayuda a enfocarnos en lo que realmente genera valor—y nos asegura que siempre trabajamos en lo que realmente genera impacto.",
+
+  "why_tulipan_title": "Por Qué Tulipán",
+  "why_tulipan_subtitle": "Por Qué los Líderes de la Industria Trabajan con Tulipán",
+  "why_tulipan_bullets": [
+    "Equipo de matemáticos, ingenieros y desarrolladores",
+    "Modelos 100% personalizados — sin herramientas genéricas",
+    "Historial comprobado en múltiples industrias",
+    "Entrega SaaS con mejoras y soporte",
+    "Nos movemos rápido y damos resultados donde otros se detienen"
+  ],
+  "razones": [
+    "Equipo de matemáticos, ingenieros y desarrolladores",
+    "Modelos 100% personalizados — nada prefabricado",
+    "Historial probado en diversas industrias",
+    "La propiedad intelectual permanece con nosotros",
+    "Nos movemos rápido y nos encantan los retos complejos"
+  ],
+
   "saas": "IA Aplicada como SaaS",
   "saas_description": "Todos nuestros modelos se despliegan sin servidores en AWS, con mejora continua y soporte",
-  "saas_benefits": "Tú te enfocas en crecer — nosotros nos encargamos de las matemáticas."
+  "saas_benefits": "Tú te enfocas en crecer — nosotros nos encargamos de las matemáticas.",
 
+  "contact_us": "Contáctanos",
+  "contact_us_title": "¿Listo para Revolucionar Tus Operaciones?",
+
+  "footer_empresa": "Tulipán 1637",
+  "footer_derechos": "Todos los derechos reservados.",
+  "footer_inicio": "Inicio",
+  "footer_casos": "Casos",
+  "footer_contacto": "Contacto",
+  "footer_correo": "hello@tulipan.ai"
 }

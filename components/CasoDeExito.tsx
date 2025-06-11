@@ -26,7 +26,7 @@ export default function CasosDeExitoCarousel({ dict }: Props) {
 
   // ⏱️ Autoplay
   useEffect(() => {
-    const interval = setInterval(next, 5000); // cambia cada 5 segundos
+    const interval = setInterval(next, 8000); // cambia cada 5 segundos
     return () => clearInterval(interval); // limpiar intervalo al desmontar
   }, [successCases.length]);
 
