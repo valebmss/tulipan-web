@@ -300,7 +300,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       className="flex flex-col md:flex-row gap-4 justify-center items-center"
     >
      <a
-  href="https://calendly.com/tulipan1637"
+  href="https://"
   target="_blank"
   rel="noopener noreferrer"
   className="border border-gray-400 text-gray-100 hover:bg-white hover:text-black px-6 py-3 rounded-lg transition duration-300"
