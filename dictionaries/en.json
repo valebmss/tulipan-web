@@ -36,7 +36,8 @@
       "content": [
         "Custom time-series models that predict short-, medium-, and long-term trends.",
         "• Sales Forecasting – (Retail): Incorporates macroeconomic variables like GDP and exchange rates. We can include as many exogenous variables as are available and design individual time series models for each SKU to maximize forecasting accuracy and business impact.",
-        "• Inventory Planning – Retail Chains: Predicts consumption and automates restocking"
+        "• Inventory Planning – Retail Chains: Predicts consumption and automates restocking",
+        "• Demand Forecasting – (Cross-industry): We anticipate future needs by considering multiple variables, seasonality, and historical behavior to support strategic and operational decision-making"
       ]
     },
     {

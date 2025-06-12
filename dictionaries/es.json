@@ -36,7 +36,8 @@
       "content": [
         "Modelos personalizados de series de tiempo que predicen tendencias a corto, mediano y largo plazo.",
         "• Pronóstico de Ventas – (Retail): Integra variables macroeconómicas como el PIB y el tipo de cambio. Podemos incluir tantas variables exógenas como estén disponibles y diseñar modelos individuales de series de tiempo por SKU para maximizar la precisión del pronóstico y su impacto.",
-        "• Planificación de Inventarios – Cadenas Retail: Predice el consumo y automatiza la reposición."
+        "• Planificación de Inventarios – Cadenas Retail: Predice el consumo y automatiza la reposición.",
+        "• Pronóstico de la Demanda – (Multisectorial): Anticipamos necesidades futuras considerando múltiples variables, estacionalidad y comportamientos históricos para apoyar decisiones estratégicas y operativas."
       ]
     },
     {
