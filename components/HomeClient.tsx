@@ -191,7 +191,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       if (i === 14) {
         return (
           <React.Fragment key="center-text">
-            <div className="col-span-2 sm:col-span-3 lg:col-span-2 lg:row-span-2 flex items-center justify-center bg-[#0f0f0f] px-4 py-10">
+            <div className="col-span-2 sm:col-span-3 lg:col-span-2 lg:row-span-2 flex items-center justify-center  px-4 py-10" style={{backgroundColor: "#1A1A23"}}>
               <motion.h2
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -215,7 +215,7 @@ export default function HomeClient({ dict }: { dict: any }) {
       return (
         <div
           key={i}
-          className="h-20 sm:h-24 flex items-center justify-center bg-[#111] px-3 sm:px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+          className="h-20 sm:h-24 flex items-center justify-center  px-3 sm:px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer" style={{backgroundColor: "#1A1A23"}}
         >
           <img
             src={logo.src}
