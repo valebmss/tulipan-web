@@ -6,30 +6,32 @@ import { motion } from "framer-motion";
 
 const team = [
   {
-    name: "María Rodríguez",
-    role: "CEO & Fundadora",
-    img: "/team/maria.jpg",
+    name: "Santiago Gutiérrez",
+    role: "COO / Director of Mathematical Modeling and Optimization",
+    linkedin: "https://www.linkedin.com/in/santiago-gutierrez-b12179207/",
+  },
+  {
+    name: "Juan Guillermo Vélez",
+    role: "Chief of Data Science and AI",
+    linkedin: "https://www.linkedin.com/in/juan-guillermo-v%C3%A9lez-carmona-21b85231/",
+  },
+  {
+    name: "Daniel Serna Buitrago",
+    role: "Director of Infrastructure, Computer Vision & IoT",
+    linkedin: "https://www.linkedin.com/in/daniel-eduardo-serna-buitrago-4779ab5b/",
+  },
+  {
+    name: "Santiago Rendón",
+    role: "CTO / Director of Software Development",
     linkedin: "#",
   },
   {
-    name: "Carlos Pérez",
-    role: "CTO & Arquitecto IA",
-    img: "/team/carlos.jpg",
-    linkedin: "#",
-  },
-  {
-    name: "Laura Gómez",
-    role: "Directora de Proyectos",
-    img: "/team/laura.jpg",
-    linkedin: "#",
-  },
-  {
-    name: "Daniel Ruiz",
-    role: "Especialista en Datos",
-    img: "/team/daniel.jpg",
-    linkedin: "#",
+    name: "Juan Francisco Atuesta",
+    role: "CEO",
+    linkedin: "https://www.linkedin.com/in/jfatuesta/",
   },
 ];
+
 
 type Props = {
   dict: {
@@ -66,16 +68,6 @@ export default function OurTeam({ dict }: Props) {
             key={i}
             className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" style={{backgroundColor: "#1A1A23"}}
           >
-<div className="flex justify-center mt-6">
-  <div className="w-32 h-32 relative rounded-full overflow-hidden border-2 border-cyan-400 shadow-md">
-    <Image
-      src={member.img}
-      alt={member.name}
-      fill
-      className="object-cover"
-    />
-  </div>
-</div>
 
             <div className="p-5 text-center">
               <h3 className="text-xl font-semibold">{member.name}</h3>
