@@ -101,7 +101,6 @@ export default function HomeClient({ dict }: { dict: any }) {
 
           </motion.div>
           <OurTeam dict={dict} />
-          <Asesores dict={dict} />
         </div>
       </section>
       <section
