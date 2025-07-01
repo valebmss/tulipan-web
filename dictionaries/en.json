@@ -169,5 +169,12 @@
   "footer_correo": " contact@tulipan1637.com",
     "contact_us_text": "Interested in working together? Let's talk.",
   "contact_us_call": "Schedule a Call",
-  "contact_us_whatsapp": "Message us on WhatsApp"
+  "contact_us_whatsapp": "Message us on WhatsApp",
+  "teamdescription": [
+    "Santiago is a mathematician with deep expertise in applied mathematics, optimization, and data analytics. He leads a team of PhDs and engineers dedicated to solving complex operational challenges through advanced modeling.\nHis work combines robust and stochastic optimization, machine learning, and probabilistic methods. By turning real-world constraints into scalable models, he helps clients unlock clarity, efficiency, and measurable results.",
+    "Juan is a mathematician and Tulipán’s lead architect of intelligent systems. He designs and implements models for forecasting, anomaly detection, segmentation, and personalized recommendations.\nHis approach spans from data cleaning and clustering to advanced techniques like topological data analysis and large-scale parallel processing. Juan ensures every model is production-ready and delivers real-time impact inside client applications.",
+    "Daniel is an expert in computer vision and edge computing. He leads the full lifecycle of AI models designed for deployment on embedded systems and IoT devices.\nHe also oversees Tulipán’s serverless infrastructure and automation pipelines on AWS, and heads the internal code audit team. His ability to bridge low-level engineering with large-scale cloud systems ensures performance and reliability in production environments.",
+    "Santiago leads Tulipán’s software engineering and systems architecture. He builds robust, scalable platforms that connect AI models with real users through seamless applications and backend systems.\nHe specializes in progressive web apps, microservices, and serverless deployments on AWS. His work ensures Tulipán’s solutions are fast, reliable, and fully integrated with each client’s ecosystem.",
+    "Juan Francisco Atuesta\nCEO\nJuan Francisco brings a unique, cross-disciplinary perspective shaped by a career spanning finance, technology, and operations. He combines strategic insight with deep operational understanding to act on the levers that drive business performance.\nWith experience in private equity, strategic consulting, and leading startups, he blends analytical rigor with practical instincts. Backed by advanced academic training and a strong technical-administrative mindset, he orchestrates Tulipán’s multidisciplinary teams to deliver mathematically driven solutions that generate real, scalable value."
+  ]
 }

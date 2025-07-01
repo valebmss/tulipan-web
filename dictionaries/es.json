@@ -169,5 +169,14 @@
   "footer_correo": " contact@tulipan1637.com",
     "contact_us_text": "¿Interesado en trabajar juntos? Hablemos.",
   "contact_us_call": "Agendar una Llamada",
-  "contact_us_whatsapp": "Escríbenos por WhatsApp"
+  "contact_us_whatsapp": "Escríbenos por WhatsApp",
+
+
+     "teamdescription": [
+    "Santiago es matemático, experto en matemáticas aplicadas, optimización y análisis de datos. Lidera un equipo de doctores e ingenieros enfocado en resolver los retos operativos más complejos mediante modelos avanzados.\nSu trabajo combina optimización robusta y estocástica, aprendizaje automático y métodos probabilísticos. Convierte restricciones reales en modelos escalables que generan claridad, eficiencia y resultados medibles para cada cliente.",
+    "Juan es matemático y arquitecto principal de sistemas inteligentes en Tulipán. Diseña e implementa modelos para pronósticos, detección de anomalías, segmentación y recomendaciones personalizadas.\nSu enfoque va desde la limpieza de datos y el agrupamiento hasta técnicas avanzadas como análisis topológico y procesamiento paralelo a gran escala. Asegura que cada modelo esté listo para producción y genere impacto en tiempo real dentro de las aplicaciones del cliente.",
+    "Daniel es experto en visión artificial y edge computing. Lidera el ciclo completo de modelos de IA diseñados para ejecutarse en sistemas embebidos y dispositivos IoT.\nTambién supervisa la infraestructura sin servidor de Tulipán y la automatización de pipelines en AWS, además de dirigir el equipo interno de auditoría de código. Su capacidad para unir ingeniería de bajo nivel con sistemas cloud a gran escala asegura rendimiento y confiabilidad en producción.",
+    "Santiago lidera la ingeniería de software y la arquitectura de sistemas en Tulipán. Construye plataformas robustas y escalables que conectan modelos de IA con usuarios reales mediante aplicaciones y sistemas backend integrados.\nEs especialista en aplicaciones web progresivas, microservicios y despliegues sin servidor en AWS. Su trabajo garantiza que cada solución de Tulipán sea rápida, confiable y perfectamente integrada al ecosistema tecnológico de cada cliente.",
+    "Juan Francisco aporta una perspectiva interdisciplinaria única, construida a lo largo de una carrera en finanzas, tecnología y operaciones. Combina visión estratégica con un profundo entendimiento operativo para accionar sobre las verdaderas palancas del rendimiento empresarial.\nSu experiencia en inversión privada, consultoría estratégica y liderazgo de startups le ha dado el rigor analítico y la intuición práctica necesarios para navegar entornos complejos. Con una sólida formación académica y un enfoque técnico-administrativo, lidera los equipos multidisciplinarios de Tulipán para entregar soluciones matemáticas de alto impacto que generan valor real y escalable."
+  ]
 }

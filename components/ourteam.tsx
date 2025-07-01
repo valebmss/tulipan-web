@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
 const team = [
   {
     name: "Santiago Gutiérrez",
@@ -32,46 +31,51 @@ const team = [
   },
 ];
 
-
 type Props = {
   dict: {
-    [key: string]: string;
+    [key: string]: string | string[];
   };
 };
 
 export default function OurTeam({ dict }: Props) {
-  return (
-    <section id="equipo" className=" text-white py-20 px-6 md:px-20">
-      <div className="text-center mb-12">
-                    <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl mt-18 text-gray-200 max-w-2xl mx-auto"
-            >
-              {dict.team_title }
-            </motion.h3>
-                         <motion.p
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.8, delay: 0.2 }}
-                          className="text-lg  mt-8 sm:text-xl text-gray-300 max-w-4xl mx-auto"
-                        >
-                          {dict.about_p2}
-                        </motion.p>
+  const descriptions = dict.teamdescription as string[];
 
+  return (
+    <section id="equipo" className="text-white py-20 px-6 md:px-20">
+      <div className="text-center mb-12">
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-2xl mt-18 text-gray-200 max-w-2xl mx-auto"
+        >
+          {dict.team_title as string}
+        </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg mt-8 sm:text-xl text-gray-300 max-w-4xl mx-auto"
+        >
+          {dict.about_p2 as string}
+        </motion.p>
       </div>
 
-<div className="grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {team.map((member, i) => (
           <div
             key={i}
-            className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group" style={{backgroundColor: "#1A1A23"}}
+            className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+            style={{ backgroundColor: "#1A1A23" }}
           >
-
             <div className="p-5 text-center">
               <h3 className="text-xl font-semibold">{member.name}</h3>
               <p className="text-sm text-gray-400">{member.role}</p>
+              {descriptions[i] && (
+                <p className="mt-2 text-sm text-gray-500 whitespace-pre-line">
+                  {descriptions[i]}
+                </p>
+              )}
               <a
                 href={member.linkedin}
                 target="_blank"
