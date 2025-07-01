@@ -6,6 +6,7 @@ import Link from "next/link";
 import HeroCards from "./CardsImage";
 import OurTeam from "./ourteam";
 import Asesores from "./asesores";
+import { useState } from "react";
 import CasosDeExitoCarousel from "./CasoDeExito";
 import HowWeDoIt from "./HowWeDoIt";
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
@@ -18,6 +19,27 @@ export default function HomeClient({ dict }: { dict: any }) {
   }));
 
   const centerIndex = 14;
+
+  
+function SafeLogo({ src, alt }: { src: string; alt: string }) {
+  const [visible, setVisible] = useState(true);
+
+  if (!visible) return null;
+
+  return (
+    <div
+      className="h-20 sm:h-24 flex items-center justify-center px-3 sm:px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+      style={{ backgroundColor: "#1A1A23" }}
+    >
+      <img
+        src={src}
+        alt=""
+        className="max-h-10 sm:max-h-12 md:max-h-14 w-auto opacity-80"
+        onError={() => setVisible(false)}
+      />
+    </div>
+  );
+}
 
   return (
     <div>
@@ -185,47 +207,37 @@ export default function HomeClient({ dict }: { dict: any }) {
           </div>
         </div>
         <section className="py-16 px-4 sm:px-6 md:px-10 w-full">
-  <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[1px] bg-white/5">
-    {logos.map((logo, i) => {
-      // Insertar el bloque de texto centrado
-      if (i === 14) {
-        return (
-          <React.Fragment key="center-text">
-            <div className="col-span-2 sm:col-span-3 lg:col-span-2 lg:row-span-2 flex items-center justify-center  px-4 py-10" style={{backgroundColor: "#1A1A23"}}>
-              <motion.h2
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                className="text-center text-base sm:text-xl md:text-2xl font-bold text-white leading-snug"
-              >
-                Trusted by<br />
-                leading data<br />
-                teams
-              </motion.h2>
-            </div>
-          </React.Fragment>
-        );
-      }
+     <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[1px] bg-white/5">
+      {logos.map((logo, i) => {
+        // Insertar bloque de texto centrado
+        if (i === 14) {
+          return (
+            <React.Fragment key="center-text">
+              <div className="col-span-2 sm:col-span-3 lg:col-span-2 lg:row-span-2 flex items-center justify-center px-4 py-10" style={{ backgroundColor: "#1A1A23" }}>
+                <motion.h2
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-center text-base sm:text-xl md:text-2xl font-bold text-white leading-snug"
+                >
+                  Trusted by<br />
+                  leading data<br />
+                  teams
+                </motion.h2>
+              </div>
+            </React.Fragment>
+          );
+        }
 
-      // Omitir los espacios que ocupa el texto
-      if ([15, 17, 18].includes(i)) {
-        return null;
-      }
+        // Omitir los espacios que ocupa el texto
+        if ([15, 17, 18].includes(i)) {
+          return null;
+        }
 
-      return (
-        <div
-          key={i}
-          className="h-20 sm:h-24 flex items-center justify-center  px-3 sm:px-4 hover:opacity-50 transition-opacity duration-300 cursor-pointer" style={{backgroundColor: "#1A1A23"}}
-        >
-          <img
-            src={logo.src}
-            alt={logo.alt}
-            className="max-h-10 sm:max-h-12 md:max-h-14 w-auto opacity-80"
-          />
-        </div>
-      );
-    })}
-  </div>
+        // Cada logo tiene un componente con estado local
+        return <SafeLogo key={i} src={logo.src} alt={logo.alt} />;
+      })}
+    </div>
 </section>
 
         <CasosDeExitoCarousel dict={dict} />
