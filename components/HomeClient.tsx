@@ -14,7 +14,7 @@ import React from "react";
 
 export default function HomeClient({ dict }: { dict: any }) {
   const logos = Array.from({ length: 36 }, (_, i) => ({
-    src: `/logos/logo${i + 1}.png`,
+    src: `/logos/logo${i}.png`,
     alt: `Logo ${i + 1}`,
   }));
 
