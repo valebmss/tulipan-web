@@ -24,7 +24,7 @@ const team = [
   {
     name: "Santiago Rendón",
     role: "CTO / Director of Software Development",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/santiagorendon/",
   },
   {
     name: "Juan Francisco Atuesta",
