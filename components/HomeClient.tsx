@@ -313,23 +313,7 @@ function SafeLogo({ src, alt }: { src: string; alt: string }) {
       📧 <a href="mailto:contact@tulipan1637.com" className="underline hover:text-cyan-400">contact@tulipan1637.com</a>
     </motion.p>
 
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.6 }}
-      className="flex flex-col md:flex-row gap-4 justify-center items-center"
-    >
-     <a
-  href="https://"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="border border-gray-400 text-gray-100 hover:bg-white hover:text-black px-6 py-3 rounded-lg transition duration-300"
->
-  {dict.contact_us_call}
-</a>
 
-
-    </motion.div>
   </div>
 </section>
 
