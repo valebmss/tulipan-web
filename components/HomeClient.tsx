@@ -210,7 +210,7 @@ function SafeLogo({ src, alt }: { src: string; alt: string }) {
      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[1px] bg-white/5">
       {logos.map((logo, i) => {
         // Insertar bloque de texto centrado
-        if (i === 14) {
+        if (i === 20) {
           return (
             <React.Fragment key="center-text">
               <div className="col-span-2 sm:col-span-3 lg:col-span-2 lg:row-span-2 flex items-center justify-center px-4 py-10" style={{ backgroundColor: "#1A1A23" }}>
