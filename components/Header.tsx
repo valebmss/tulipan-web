@@ -102,11 +102,11 @@ export default function Header({ dict }: HeaderProps) {
         }`}
       >
         {[
-          { href: "#quehacemos", label: dict.nav_quienes },
-          { href: "#quehacemos", label: dict.nav_quehacemos },
+          { href: "#sobrenosotros", label: dict.nav_quienes },
+          { href: "#capacidad", label: dict.nav_quehacemos },
           { href: "#procesos", label: dict.nav_como },
           { href: "#casos", label: dict.nav_casos },
-          { href: "#porque", label: dict.nav_porque },
+          { href: "#porque_tulipan", label: dict.nav_porque },
           { href: "#contacto", label: dict.nav_contacto },
         ].map((item, index) => (
           <Link
