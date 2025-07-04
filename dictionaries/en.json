@@ -176,5 +176,7 @@
     "Daniel is an expert in computer vision and edge computing. He leads the full lifecycle of AI models designed for deployment on embedded systems and IoT devices.\nHe also oversees Tulipán’s serverless infrastructure and automation pipelines on AWS, and heads the internal code audit team. His ability to bridge low-level engineering with large-scale cloud systems ensures performance and reliability in production environments.",
     "Santiago leads Tulipán’s software engineering and systems architecture. He builds robust, scalable platforms that connect AI models with real users through seamless applications and backend systems.\nHe specializes in progressive web apps, microservices, and serverless deployments on AWS. His work ensures Tulipán’s solutions are fast, reliable, and fully integrated with each client’s ecosystem.",
     "Juan Francisco Atuesta\nCEO\nJuan Francisco brings a unique, cross-disciplinary perspective shaped by a career spanning finance, technology, and operations. He combines strategic insight with deep operational understanding to act on the levers that drive business performance.\nWith experience in private equity, strategic consulting, and leading startups, he blends analytical rigor with practical instincts. Backed by advanced academic training and a strong technical-administrative mindset, he orchestrates Tulipán’s multidisciplinary teams to deliver mathematically driven solutions that generate real, scalable value."
-  ]
+  ],
+  "policy": "Tulipán is committed to protecting user information. Any data collected is used solely for operational purposes and is never shared with third parties without consent."
+
 }

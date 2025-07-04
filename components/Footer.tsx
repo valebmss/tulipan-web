@@ -8,6 +8,7 @@ interface FooterProps {
     footer_casos: string;
     footer_contacto: string;
     footer_correo: string;
+    policy: string;
   };
 }
 
@@ -44,6 +45,8 @@ export default function Footer({ dict }: FooterProps) {
               {dict.footer_correo}
             </a>
           </p>
+            <p>{dict.policy}</p>
+
         </div>
       </div>
     </footer>
