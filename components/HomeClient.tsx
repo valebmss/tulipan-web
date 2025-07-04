@@ -13,12 +13,19 @@ const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 import React from "react";
 
 export default function HomeClient({ dict }: { dict: any }) {
-  const logos = Array.from({ length: 36 }, (_, i) => ({
+  const logos = Array.from({ length: 20 }, (_, i) => ({
     src: `/logos/logo${i}.png`,
     alt: `Logo ${i + 1}`,
   }));
 
-  const centerIndex = 14;
+// Inserta el bloque en la fila 3, columna 3 (posición 14 si hay 6 columnas por fila)
+const visualCenterIndex = 8;
+
+const logosWithCenter = [
+  ...logos.slice(0, visualCenterIndex),
+  { type: "center" },
+  ...logos.slice(visualCenterIndex),
+];
 
   
 function SafeLogo({ src, alt }: { src: string; alt: string }) {
@@ -206,39 +213,37 @@ function SafeLogo({ src, alt }: { src: string; alt: string }) {
             </motion.h2>
           </div>
         </div>
-        <section className="py-16 px-4 sm:px-6 md:px-10 w-full">
-     <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[1px] bg-white/5">
-      {logos.map((logo, i) => {
-        // Insertar bloque de texto centrado
-        if (i === 20) {
-          return (
-            <React.Fragment key="center-text">
-              <div className="col-span-2 sm:col-span-3 lg:col-span-2 lg:row-span-2 flex items-center justify-center px-4 py-10" style={{ backgroundColor: "#1A1A23" }}>
-                <motion.h2
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-center text-base sm:text-xl md:text-2xl font-bold text-white leading-snug"
-                >
-                  Trusted by<br />
-                  leading data<br />
-                  teams
-                </motion.h2>
-              </div>
-            </React.Fragment>
-          );
-        }
+<section className="py-16 px-4 sm:px-6 md:px-10 w-full">
+  <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[1px] bg-white/5">
+    {logosWithCenter.map((item, i) => {
+      if ((item as any).type === "center") {
+        return (
+          <div
+            key="center-text"
+            className="col-span-2 row-span-2 flex items-center justify-center px-4 py-10"
+            style={{ backgroundColor: "#1A1A23" }}
+          >
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="text-center text-base sm:text-xl md:text-2xl font-bold text-white leading-snug"
+            >
+              Trusted by<br />
+              leading data<br />
+              teams
+            </motion.h2>
+          </div>
+        );
+      }
 
-        // Omitir los espacios que ocupa el texto
-        if ([15, 17, 18].includes(i)) {
-          return null;
-        }
-
-        // Cada logo tiene un componente con estado local
-        return <SafeLogo key={i} src={logo.src} alt={logo.alt} />;
-      })}
-    </div>
+        return <SafeLogo key={i} src={(item as any).src} alt={(item as any).alt} />;
+    })}
+  </div>
 </section>
+
+
+
 
         <CasosDeExitoCarousel dict={dict} />
       </section>
